@@ -23,12 +23,12 @@
   <p align="center">
 Bridging the Gap in Sexual Education
     <br />
-    <a href=""><strong>Demo Video Link! »</strong></a>
+    <a href="https://www.youtube.com/watch?v=QsxzGdG3how"><strong>Demo Video Link! »</strong></a>
     <br />
     <br />
     <a href="https://devpost.com/software/intima">Devpost Link</a>
     .
-    <a href="https://github.com/arncv/Intima/issues">Request Bug</a>
+    <a href="https://github.com/arncv/Intima/issues">Report Bug</a>
   </p>
 </div>
 
