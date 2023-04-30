@@ -42,7 +42,7 @@ a{
 }
 
 h1{
-    font-size:16px;
+    font-size: 50;
     font-weight: bolder;
 }
 
@@ -592,7 +592,7 @@ body {
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item ">
-                            <a class="nav-link me-lg-3 " href="#aboutus"  role="button" aria-expanded="false">
+                            <a class="nav-link me-lg-3 " href="../index.html#aboutus"  role="button" aria-expanded="false">
                                 About Us
                             </a>
                         </li>
@@ -606,13 +606,15 @@ body {
                                                 
                             </ul>
                     
-                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" onclick="scrollToSection('#Bot')">
-
-                        <span class="d-flex align-items-center">
-                            <i class="bi-chat-text-fill me-2"></i>
-                            <span class="small">Go To Bot</span>
-                        </span>
-                    </button>
+                            <a href="../index.html#Bot">
+                                <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0">
+                                  <span class="d-flex align-items-center">
+                                    <i class="bi-chat-text-fill me-2"></i>
+                                    <span class="small">Go To Bot</span>
+                                  </span>
+                                </button>
+                              </a>
+                              
                 </div>
                 
             </div>
@@ -621,28 +623,25 @@ body {
         <header class="masthead">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" style="width: 100%;">
                         <div class="forum-header">
                             <h1>Intima Forum - Sex Education</h1>
                             <p>Ask questions and get answers about sex education.</p>
                           </div>
                           <ul class="question-list">
                             <li class="question-item">
-                              <p class="question-title">What is comprehensive sex education?</p>
-                              <p class="question-description">I've heard the term "comprehensive sex education" a lot, but I'm not sure what it means. Can someone explain?</p>
+                              <p class="question-title">What are some common myths about sexual health that people should be aware of?</p>
+                              <p class="question-description">Common myths include the belief that you can't get pregnant the first time you have sex, that certain positions prevent pregnancy, and that you can't get an STI from oral sex. It's important to seek accurate information from reliable sources to debunk these myths.</p>
                             </li>
                             <li class="question-item">
-                              <p class="question-title">How to talk to kids about consent?</p>
-                              <p class="question-description">I want to teach my children about the importance of consent, but I'm not sure how to start the conversation. Any tips?</p>
+                              <p class="question-title">How can I talk to my partner about using contraception?</p>
+                              <p class="question-description">Open and honest communication is key. Start by expressing your desire to use contraception and explain your reasons. Listen to your partner's thoughts and concerns, and work together to find a method that works for both of you.</p>
                             </li>
-                            <li class="question-item">
-                              <p class="question-title">Why is sex education important in schools?</p>
-                              <p class="question-description">Some people argue that sex education should be taught at home, not in schools. What are the benefits of having sex education in schools?</p>
-                            </li>
+                            
                             <!-- More questions can be added here -->
                           </ul>
                           <div class="post-form">
-                            <textarea id="postContent" rows="4" placeholder="Write your post here..."></textarea><br>
+                            <textarea id="postContent" rows="4" placeholder="Write your question here and our experts will answers them! "></textarea><br>
                             <button onclick="submitPost()">Submit</button>
                           </div>
                           <ul class="post-list" id="postList"></ul>
