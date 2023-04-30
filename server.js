@@ -36,7 +36,7 @@ async function handleUserMessage(message) {
   const response = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: prompt,
-    max_tokens: 64,
+    max_tokens: 128,
   });
 
   const reply = response.data.choices[0].text.trim();
