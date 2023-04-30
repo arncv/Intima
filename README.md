@@ -92,7 +92,6 @@ now run
 node server.js
 ```
 
-```
 
 
 See the [open issues](https://github.com/arncv/Intima/issues) for a full list of proposed features (and known issues).
