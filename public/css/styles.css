@@ -11549,8 +11549,7 @@ footer a:hover, footer a:active, footer a:focus {
 	right: 30px;
 	width: 60px;
 	height: 60px;
-	background-color: #f97316;
-  color: var(--bs-body-color);
+	background-color: #fb923c;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
