@@ -65,14 +65,10 @@ To further enhance user experience, Intima integrates ChatGPT, an AI-powered cha
 - Integration of ChatGPT for personalized support and answers
 - 24/7 availability for easy access to information
 
-## Technologies Used
-- HTML/CSS
-- JavaScript
-- Node.js
-- Express.js
-- OpenAI GPT-3.5
 
-## HOW TO RUN 
+## Contributing 
+
+### How to run
 
 ``` bash
 git clone https://github.com/arncv/Intima.git
@@ -133,18 +129,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
   <img src="https://contrib.rocks/image?repo=arncv/Intima" />
 </a>
 
-
-
-
-
-
-
-
-# FREE & OPEN SOURCE PROJECT - HECK YEAHH!
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/arncv/Intima.svg?style=for-the-badge
 [contributors-url]: https://github.com/arncv/Intima/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/arncv/Intima.svg?style=for-the-badge
