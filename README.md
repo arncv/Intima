@@ -67,12 +67,12 @@ To further enhance user experience, Intima integrates ChatGPT, an AI-powered cha
 
 
 ## Make Contribution
-[CONTRIBUTION.md]
+[CONTRIBUTING.md](https://github.com/arncv/Intima/blob/main/CONTRIBUTING.md)
 
 
 ## Code Of Conduct
 
-Click Here [CODE_OF_CONDUCT]
+Click Here [CODE_OF_CONDUCT](https://github.com/arncv/Intima/blob/main/CODE_OF_CONDUCT.md)
 
 
 
