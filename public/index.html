@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -41,7 +42,8 @@
                             <a class="nav-link me-lg-3 " href="#Resources"  role="button" aria-expanded="false">
                                 Resources
                             </a>
-                        </li>
+
+                                 </li>
                         <li class="nav-item">
                             <a class="nav-link me-lg-3 " href="pages/forum.html"  role="button" aria-expanded="false">
                                 Forum
@@ -55,6 +57,19 @@
                         </li>
                                         
                     </ul>
+=======
+                  
+                                <li class="nav-item">
+                                    <a class="nav-link me-lg-3 " href="pages/forum.html"  role="button" aria-expanded="false">
+                                        Forum
+                                    </a>
+                                    
+                                </li>
+                                                
+                            </ul>
+
+                            <!--Dark mode button-->
+                            <img id="darkmodeButton" width="30" height="30" src="https://img.icons8.com/ios/50/day-and-night.png" alt="day-and-night" style="margin-right: 20px;"/>
                     
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" onclick="scrollToSection('#Bot')">
 
@@ -373,6 +388,19 @@
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Dark mode JS-->
+        <script src="js/dark-script.js"></script>
+        <script>
+        // Function to toggle Darkmode when the navbar button is clicked
+            function toggleDarkMode() {
+              const darkmode = new Darkmode();
+              darkmode.toggle(); // Toggle Darkmode
+            }
+          
+            // Add a click event listener to the navbar button
+            const darkmodeButton = document.getElementById('darkmodeButton');
+            darkmodeButton.addEventListener('click', toggleDarkMode);
+        </script>
         <!-- Core theme JS-->
         <script src="scripts.js"></script>
         <script defer src="/_vercel/insights/script.js"></script>
@@ -388,7 +416,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-agency/6.0.2/js/scripts.min.js.map"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-        <!-- Light/Dark Mode -->
+<!-- Light/Dark Mode -->
         <script>
             let darkModeBtn = document.querySelector(".dark-mode-btn");
             let navBar = document.querySelector("nav");
