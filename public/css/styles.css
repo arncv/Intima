@@ -11802,3 +11802,6 @@ footer a:hover, footer a:active, footer a:focus {
   cursor: pointer;
 }
 
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
