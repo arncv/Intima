@@ -89,9 +89,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Our ♥️ Contributors
 
-<a href="https://github.com/refinedev/refine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=arncv/Intima" />
+<a href="https://github.com/arncv/intima/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=arncv/intima" />
 </a>
+
 
 [contributors-shield]: https://img.shields.io/github/contributors/arncv/Intima.svg?style=for-the-badge
 [contributors-url]: https://github.com/arncv/Intima/graphs/contributors
