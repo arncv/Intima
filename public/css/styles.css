@@ -11659,10 +11659,6 @@ footer a:hover, footer a:active, footer a:focus {
     width: 500px !important;
   }
 
-  nav .dark-mode-btn{
-    width: 20px !important;
-    height: 80px !important;
-  }
 }
 
 .dropdown-menu {
