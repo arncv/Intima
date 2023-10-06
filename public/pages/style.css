@@ -2,7 +2,7 @@
 :root {
     --body-bg: linear-gradient(135deg, #eeeeee 0%, #f5e4da 100%);
     --msger-bg: #fff;
-    --left-msg-bg: linear-gradient(to right, #f5e4da, #d5bbab);
+    --left-msg-bg: linear-gradient(to right, #f5e4da, #eeb283);
     --right-msg-bg: #d0d0d0;
 }
 
@@ -45,7 +45,7 @@ body {
     justify-content: center;
     padding: 10px;
     border-radius: 10px 10px 0px 0px;
-    background: #f5e4da;
+    background: #eeb283;
     color: #666;
 }
 
