@@ -8640,6 +8640,7 @@ textarea.form-control-lg {
     float: left !important;
   }
 
+
   .float-md-end {
     float: right !important;
   }
@@ -11615,6 +11616,7 @@ footer a:hover, footer a:active, footer a:focus {
     width: 70%;
     display: block;
   }
+ 
   .masthead .masthead-device-mockup .device-wrapper {
     max-width: 12.5rem;
   }
@@ -11649,6 +11651,12 @@ footer a:hover, footer a:active, footer a:focus {
   }
   .masthead .masthead-device-mockup .device-wrapper {
     max-width: 17rem;
+  }
+}
+
+@media (min-width: 300px) {
+   header .col-lg-6 .home-img{
+    width: 500px !important;
   }
 }
 
