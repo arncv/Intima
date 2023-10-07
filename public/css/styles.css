@@ -216,7 +216,10 @@ strong {
 small, .small {
   font-size: 0.875em;
 }
-
+.small a{
+  text-decoration: none;
+  color: white;
+}
 mark, .mark {
   padding: 0.2em;
   background-color: #fcf8e3;
@@ -6527,6 +6530,7 @@ textarea.form-control-lg {
 .ratio-21x9 {
   --bs-aspect-ratio: 42.8571428571%;
 }
+
 
 .fixed-top {
   position: fixed;
