@@ -50,9 +50,11 @@ h1{
 /* ########################################### */
 /*           Forums.html                       */
 /* ########################################### */
-.container{
+header,footer {
+    .container{
     margin: 20px;
     padding: 20px;
+}
 }
 
 .subforum{
@@ -176,21 +178,16 @@ header{
     list-style-type:none;
     overflow: hidden;
 }
-
 .nav-item a{
     float: right;
     display:block;
     text-align: center;
     margin-inline: 20px;
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px;
     color:#fff;
+    font-weight: 100;
 }
-
-.nav-item a:hover{
-    background-color: rgb(0,0,0,0.1);
-}
-
 .hide{
     display: none;
 }
@@ -212,6 +209,9 @@ header{
     font-size:60px;
     display: inline-block;
     font-family:aquire;
+}
+.logo{
+    font-size:28px;
 }
 
 /*Navbar for the smartphones*/
@@ -282,6 +282,10 @@ header{
 }
 
 /* forum info Styling */
+#postContent {
+    width: 100%;
+}
+
 .forum-info{
     padding: 20px;
     background-color: #111314;
@@ -476,54 +480,12 @@ footer{
 .comment-area input:hover{
     border: solid 1px #000000;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .forum-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .question-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  .question-item {
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    cursor: pointer;
-  }
-  .question-item:last-child {
-    border-bottom: none;
-  }
-  .question-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
-  .question-description {
-    margin: 5px 0 0;
-    color: #777;
-  }
-
-
-
-
-
   body {
       font-family: Arial, sans-serif;
       background-color: #f8f8f8;
     }
-    .container {
+    header,footer{
+        .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
@@ -565,26 +527,35 @@ body {
       margin: 5px 0;
       box-sizing: border-box;
     }
-    .submit-form textarea {
+    .post-form textarea {
       width: 100%;
       padding: 10px;
-      margin: 5px 0;
+      margin: 30px 0 10px;
       box-sizing: border-box;
+      border: rgb(199, 190, 190) 1px solid;
+      background-color: white;
+      
+      
+
     }
-    .submit-form button {
+    .post-form button {
       padding: 10px;
-      background-color: #4CAF50;
+     border-radius: 6px;
       color: #fff;
       border: none;
       cursor: pointer;
+      background-color: #FB923C;
+      width: 100px;
+      text-align: center;
+    }
     }
         </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-white" id="mainNav">
-            <div class="container-fluid px-5   ">
-                <a class="navbar-brand fw-bold" href="../index.html"><img src="../assets/img/removebg.png" alt="logo" style="width: 70px;">intima</a>
+            <div class="container px-5   ">
+                <a class="logo navbar-brand fw-bold" href="../index.html"><img src="../assets/img/removebg.png" alt="logo" style="width: 70px;">intima</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="bi-list"></i>
@@ -601,17 +572,16 @@ body {
                                     <a class="nav-link me-lg-3 " href="../index.html#Resources"  role="button" aria-expanded="false">
                                         Resources
                                     </a>
-                                    
                                 </li>
                                                 
                             </ul>
                     
                             <a href="../index.html#Bot">
-                                <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0">
-                                  <span class="d-flex align-items-center">
-                                    <i class="bi-chat-text-fill me-2"></i>
-                                    <span class="small">Go To Bot</span>
-                                  </span>
+                                <button class="btn btn-primary rounded-pill px-3 py-2 mb-2 mb-lg-0">
+                                    <span class="d-flex align-items-center">
+                                        <i class="bi-chat-text-fill me-2"></i>
+                                        <span class="large">Go To Bot</span>
+                                    </span>
                                 </button>
                               </a>
                               
@@ -667,9 +637,9 @@ body {
                             </li>
                             <!-- More questions can be added here -->
                           </ul>
-                          <div class="post-form">
-                            <textarea id="postContent" rows="4" placeholder="Write your question here and our experts will answers them! "></textarea><br>
-                            <button onclick="submitPost()">Submit</button>
+                          <div class="post-form ">
+                            <textarea id="postContent" rows="4" placeholder="Write your question here and our experts will answers them! " class="question-input"></textarea><br>
+                            <button onclick="submitPost()" class="">Submit</button>
                           </div>
                           <ul class="post-list" id="postList"></ul>
                         </div>
