@@ -527,18 +527,26 @@ footer{
       margin: 5px 0;
       box-sizing: border-box;
     }
-    .submit-form textarea {
+    .post-form textarea {
       width: 100%;
       padding: 10px;
-      margin: 5px 0;
+      margin: 30px 0 10px;
       box-sizing: border-box;
+      border: rgb(199, 190, 190) 1px solid;
+      background-color: white;
+      
+      
+
     }
-    .submit-form button {
+    .post-form button {
       padding: 10px;
-      background-color: #4CAF50;
+     border-radius: 6px;
       color: #fff;
       border: none;
       cursor: pointer;
+      background-color: #FB923C;
+      width: 100px;
+      text-align: center;
     }
     }
         </style>
@@ -629,9 +637,9 @@ footer{
                             </li>
                             <!-- More questions can be added here -->
                           </ul>
-                          <div class="post-form">
-                            <textarea id="postContent" rows="4" placeholder="Write your question here and our experts will answers them! "></textarea><br>
-                            <button onclick="submitPost()">Submit</button>
+                          <div class="post-form ">
+                            <textarea id="postContent" rows="4" placeholder="Write your question here and our experts will answers them! " class="question-input"></textarea><br>
+                            <button onclick="submitPost()" class="">Submit</button>
                           </div>
                           <ul class="post-list" id="postList"></ul>
                         </div>
