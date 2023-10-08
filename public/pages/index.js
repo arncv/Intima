@@ -30,3 +30,12 @@ const chatForm = document.getElementById('chat-form');
 
         messageInput.value = '';
       });
+      function goBack() {
+        window.history.back();
+      }
+      
+      function startChat() {
+        location.reload();
+      }
+      
+    
