@@ -9,6 +9,7 @@ const chatForm = document.getElementById('chat-form');
         const messageEl = document.createElement('div');
         messageEl.className = 'message';
         messageEl.textContent = `You: ${message}`;
+        messageEl.style.background = '  background-color: #007BFF;'
         chatLog.appendChild(messageEl);
 
         fetch('/chat', {
