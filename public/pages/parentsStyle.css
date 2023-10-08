@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.introduction {
+    margin-top: 50px;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
