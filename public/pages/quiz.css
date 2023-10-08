@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+html{
+    font-size: 60%;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(248, 188, 76);
+    background-image: linear-gradient(40deg,#eeb283 30%,rgb(247, 232, 215) 100%);
+}
+.quiz-section{
+    width: 40%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow:  0 0 30px rgb(105, 76, 8);
+}
+#question{
+    font-size: 2.5rem;
+    padding: 1rem 5rem;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 3rem;
+}
+li{
+    list-style: none;
+    min-width: 40%;
+    min-height: 5rem;
+    border-radius: 7rem;
+    border: 0.2rem solid rgb(255, 255, 255);
+    padding: 0 7rem 0 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+label{
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+}
+input[type="radio"]:checked{
+    background-color: rgb(233, 195, 113);
+    border-color: orange;
+}
+.btn{
+    padding: 2rem 5rem;
+    text-align: center;
+}
+button{
+    padding: 0 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    border: 1px solid white;
+    background-color: #eeb283;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+}
+button:hover{
+    height: 4rem;
+    text-align: center;
+    background-color: #d49e74;
+
+}
+.result{
+    width: 100%;
+    height: auto;
+    padding: 5rem;
+    background-color: #f8cba9;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 30px rgb(105, 76, 8);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+.result h3,.score{
+    font-size: 3.4rem;
+}
+.result p{
+    font-size: 2rem;
+}
+
+
+
+@media (min-width: 200px) and (max-width: 450px) {
+    .quiz-section{
+        width: 95%;
+    }
+    ul{
+        padding: 2rem 1rem;
+    }
+}
+@media (min-width: 451px) and (max-width: 600px) {
+    .quiz-section{
+        width: 90%
+    }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+    .quiz-section{
+        width: 80%;
+    }
+    #question{
+        font-size: 4rem;
+        padding: 3rem 5rem;
+    }
+    ul{
+        gap: 3.5rem;
+    }
+    button{
+        font-size: 3rem;
+    }
+    label{
+        font-size: 4rem;
+        padding-left: 2.5rem;
+    }
+}
