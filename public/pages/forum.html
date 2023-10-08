@@ -57,6 +57,335 @@
         /* ########################################### */
         /* header,footer {
     .container{
+
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+
+    .subforum-icon i{
+        font-size: 35px;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+  }
+/*   Header Section    */
+
+header{
+    margin-inline: 10px;
+}
+  /* Nav Bar styles */
+.navbar{
+    display:flex;
+    align-items: center;
+}
+.navigation{
+    background-color:#52057b;
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right:10px;
+}
+
+.close-icon i{
+    font-size:60px;
+    float: left;
+    cursor: pointer;
+}
+
+.nav-list{
+    list-style-type:none;
+    overflow: hidden;
+}
+
+.nav-item a{
+    float: right;
+    display:block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    padding: 10px;
+    color:#fff;
+}
+
+.nav-item a:hover{
+    background-color: rgb(0,0,0,0.1);
+}
+
+.hide{
+    display: none;
+}
+
+.bar-icon{
+    font-size: 60px;
+    display: inline-block;
+    margin-right:10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family:aquire;
+    src:url(aquire.otf);
+}
+
+.brand{
+    font-size:60px;
+    display: inline-block;
+    font-family:aquire;
+}
+
+/*Navbar for the smartphones*/
+@media screen and (max-width: 460px){
+    .navigation{
+        max-height: auto;
+    }
+    
+    .close-icon i{
+        font-size:30px;
+    }
+    
+    .nav-item a{
+        float:left;
+        display:inline;
+        margin-inline: 3px;
+        font-size: 10px;
+        padding: 5px;
+    }
+    
+    
+    .bar-icon{
+        font-size: 30px;
+    }
+ 
+    .brand{
+        font-size:20px;
+    }
+}
+
+  /* Search Box styles */
+.search-box{
+    border: solid 1px #52057b;
+    margin-top: 20px;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+    box-shadow:1px 2px 3px #52057b;
+}
+
+.search-box select{
+    padding: 10px;
+}
+
+.search-box input{
+    padding: 10px;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color:#fff;
+    color:#000000;
+}
+
+.search-box button:hover{
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+/* search box for smrtphones */
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+    }    
+
+}
+
+/* forum info Styling */
+.forum-info{
+    padding: 20px;
+    background-color: #111314;
+}
+
+.chart{
+    font-size:20px;
+    font-weight:bold;
+}
+/* Footer Styling */
+
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color:  #52057b;
+    display: block;
+    text-align: center;
+}
+
+
+/*Categories*/
+/* Original styles for larger screens */
+
+.category {
+    width: 33.33%;
+    float: left;
+    padding: 20px;
+}
+
+.category h2 {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #eeb283;
+}
+
+.question-list {
+    list-style: none;
+    padding: 0;
+}
+
+.question-item {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.question-description p {
+    width: 50%;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .category {
+        width: 100%; 
+    }
+
+    .question-description p {
+        width: 100%;
+    }
+}
+
+
+/* ########################################### */
+/*            posts.html                       */
+/* ########################################### */
+
+/* posts table's head  */
+.table-head{
+    display: flex;
+}
+
+.table-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: #2C2C2C;
+    font-weight: bold;
+}
+
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+    display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color: #131415;
+}
+
+.table-row .status{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row .subjects{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+}
+
+/* navigation path*/
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a{
+    color: #fff;
+}
+
+.navigate a:hover{
+    color:#FF0042;
+    font-weight: bolder;
+}
+
+/* Pagination*/
+
+.pagination{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a{
+    color: #fff;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+    opacity: 0.5;
+}
+
+.note{
+    background-color:#111314;
     margin: 20px;
     padding: 20px;
 }
@@ -632,6 +961,7 @@
       text-align: center;
     }
     }
+
         </style>
     </head>
     <body id="page-top">
@@ -678,51 +1008,73 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6" style="width: 100%;">
                         <div class="forum-header">
-                            <h1>Intima Forum - Sex Education</h1>
+                            <h1 id="forum-title">Intima Forum - Sex Education</h1>
+
                             <p>Ask questions and get answers about sex education.</p>
-                          </div>
-                          <ul class="question-list">
-                            <li class="question-item">
-                              <p class="question-title">What are some common myths about sexual health that people should be aware of?</p>
-                              <p class="question-description">Common myths include the belief that you can't get pregnant the first time you have sex, that certain positions prevent pregnancy, and that you can't get an STI from oral sex. It's important to seek accurate information from reliable sources to debunk these myths.</p>
-                            </li>
-                            <li class="question-item">
-                              <p class="question-title">How can I talk to my partner about using contraception?</p>
-                              <p class="question-description">Open and honest communication is key. Start by expressing your desire to use contraception and explain your reasons. Listen to your partner's thoughts and concerns, and work together to find a method that works for both of you.</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">How can I support a friend who has recently come out as LGBTQ+?</p>
-                                <p class="question-description">Show your friend that you care and that you're there for them. Respect their privacy and don't share their news with others without their permission. Educate yourself about LGBTQ+ issues and be an ally by challenging discrimination and supporting equality.</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">Is it normal not to experience bleeding during the first sexual intercourse?</p>
-                                <p class="question-description">Yes, it is normal for some individuals not to experience bleeding during their first sexual intercourse. Bleeding during first intercourse, often referred to as "breaking the hymen," is a common misconception. While some people may experience it, many others do not, as the presence and thickness of the hymen can vary widely among individuals. It's essential to remember that there is no single "normal" experience, and everyone's body is different. If you have concerns or questions about your sexual health, it's a good idea to consult with a healthcare provider or a qualified professional who can provide guidance and information tailored to your specific situation.</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">What types of lubricants are safe to use with condoms?</p>
-                                <p class="question-description">Water-based and silicone-based lubricants are generally safe to use with condoms. These types of lubricants are less likely to cause condom breakage or deterioration compared to oil-based lubricants. However, it's essential to check the specific product labels and packaging for any compatibility information provided by the manufacturer. Always follow the instructions and recommendations provided by the condom and lubricant manufacturers to ensure maximum effectiveness and safety.</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">What are the distinctions between birth control pills, emergency contraception, and abortion pills?</p>
-                                <p class="question-description">It's important to note that these three categories of medications serve distinct purposes and should not be confused with one another. Birth control pills are primarily used for preventing pregnancy, emergency contraception is a backup option to prevent pregnancy after unprotected sex, and abortion pills are used to terminate an existing pregnancy. The choice of which option to use depends on an individual's specific circumstances and needs, and it's essential to consult with a healthcare provider for guidance and information on these medications.</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">Can pre-ejaculation cause pregnancy?</p>
-                                <p class="question-description">Yes, pre-ejaculation, also known as precum, can potentially cause pregnancy. Precum may contain sperm cells from a previous ejaculation, which can lead to conception if it comes into contact with the vagina during sexual intercourse. While the risk is generally lower than with a full ejaculation, it's still possible. Using contraception methods, such as condoms, can significantly reduce the risk of pregnancy and protect against sexually transmitted infections (STIs).</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">What does the term 'size' refer to when discussing maxi-pads?</p>
-                                <p class="question-description">When discussing maxi-pads, the term "size" can also specifically refer to the level of absorbency and suitability for different flow levels during menstruation. Maxi-pads are available in different sizes to accommodate various flow intensities, ranging from light to heavy. Choosing the right size is essential to ensure adequate protection and comfort during menstruation.</p>
-                            </li>
-                            <li class="question-item">
-                                <p class="question-title">Is there a connection between masturbation and the development of facial pimples or acne?</p>
-                                <p class="question-description">No, there is generally no direct connection between masturbation and the development of facial pimples or acne. Acne is primarily caused by factors such as hormonal changes, genetics, excess oil production, and the presence of certain bacteria on the skin. Masturbation does not have a significant impact on these factors, and it is not a direct cause of acne. However, individual experiences may vary, and some people might notice changes in their skin due to hormonal fluctuations during sexual arousal, but this is not a common or widespread occurrence. If you have concerns about acne or skin issues, it's advisable to consult with a dermatologist or healthcare professional for appropriate advice and treatment.</p>
-                            </li>
-                            <!-- More questions can be added here -->
-                          </ul>
-                          <div class="post-form ">
-                            <textarea id="postContent" rows="4" placeholder="Write your question here and our experts will answers them! " class="question-input"></textarea><br>
-                            <button onclick="submitPost()" class="">Submit</button>
+
+
+                          <div class="category">
+                            <h2>Sexual Health Myths
+
+                            </h2>
+                            <ul class="question-list">
+                                <!-- Questions from Category 1 -->
+                                <li class="question-item">
+                                    <p class="question-title">1-What are some common myths about sexual health that people should be aware of?</p>
+                                    <p class="question-description">Common myths include the belief that you can't get pregnant the first time you have sex, that certain positions prevent pregnancy, and that you can't get an STI from oral sex. It's important to seek accurate information from reliable sources to debunk these myths.</p>
+                                    </br>
+                                    <p class="question-title">2-Can pre-ejaculation cause pregnancy?</p>
+                                    <p class="question-description">Yes, pre-ejaculation, also known as precum, can potentially cause pregnancy. Precum may contain sperm cells from a previous ejaculation, which can lead to conception if it comes into contact with the vagina during sexual intercourse. While the risk is generally lower than with a full ejaculation, it's still possible. Using contraception methods, such as condoms,can significantly reduce the risk of pregnancy and protect against sexually transmitted infections (STIs).</p>
+                                    </br>
+                                    <p class="question-title">3-Is there a connection between masturbation and the development of facial pimples or acne?</p>
+                                    <p class="question-description">No,there is generally no direct connection between masturbation and the development of facial pimples or acne. Acne is primarily caused by factors such as hormonal changes, genetics, excess oil production, and the presence of certain bacteria on the skin. Masturbation does not have a significant impact on these factors, and it is not a direct cause of acne.</p>
+                                </li>
+    
+                               
+                            </ul>
+                        </div>
+                    
+                        <div class="category">
+                            <h2>Contraception and Reproductive Health</h2>
+                            <ul class="question-list">
+                                <!-- Questions from Category 2 -->
+                                <li class="question-item">
+                                    <p class="question-title">4-How can I talk to my partner about using contraception?</p>
+                                    <p class="question-description">Open and honest communication is key. Start by expressing your desire to use contraception and explain your reasons. Listen to your partner's thoughts and concerns, and work together to find a method that works for both of you.</p>
+                                    </br>
+                    
+                                    <p class="question-title">5-What types of lubricants are safe to use with condoms?</p>
+                                    <p class="question-description">Water-based and silicone-based lubricants are generally safe to use with condoms. These types of lubricants are less likely to cause condom breakage or deterioration compared to oil-based lubricants. However, it's essential to check the specific product labels and packaging for any compatibility information provided by the manufacturer. Always follow the instructions and recommendations provided by the condom and lubricant manufacturers to ensure maximum effectiveness and safety.</p>
+                                    </br>
+                               <p class="question-title">6-What are the distinctions between birth control pills, emergency contraception, and abortion pills?</p>
+                               <p class="question-description">Birth control pills are primarily used for preventing pregnancy, emergency contraception is a backup option to prevent pregnancy, and abortion pills are used to terminate an existing pregnancy.It's essential to consult with a healthcare provider for guidance.</p>
+                                </li>
+                     
+                            </ul>
+                        </div>
+                    
+                        <div class="category">
+                            <h2>LGBTQ+ Support and Other Topics</h2>
+                            <ul class="question-list">
+                                <!-- Questions from Category 3 -->
+                                <li class="question-item">
+                                    <p class="question-title">7-How can I support a friend who has recently come out as LGBTQ+?</p>
+                                    <p class="question-description">Show your friend that you care and that you're there for them. Respect their privacy and don't share their news with others without their permission. Educate yourself about LGBTQ+ issues and be an ally by challenging discrimination and supporting equality.</p>
+                                    </br>
+                                    <p class="question-title">8-What are some resources or organizations that provide support and information for LGBTQ+ individuals and their allies?
+                                        ?</p>
+                                    <p class="question-description">NCTE advocates for policy change and social acceptance of transgender people. They provide resources on transgender rights and issues.</p>
+                                    </br>
+                                    <p class="question-title">9-What are some common challenges that LGBTQ+ individuals may face after coming out, and how can I help my friend navigate these challenges? </p>
+                                    <p class="question-description">Be a source of unconditional love and acceptance. Listen to your friend without judgment, and stand up against discrimination or homophobic/transphobic remarks when you encounter them.</p>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                          <div class="post-form">
+                            <textarea id="postContent" rows="4" style="width: 100%;" placeholder="Write your question here and our experts will answers them! "></textarea><br>
+                            <button onclick="submitPost()">Submit</button>
+
                           </div>
                           <ul class="post-list" id="postList"></ul>
                         </div>
