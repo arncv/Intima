@@ -240,7 +240,7 @@
                             coerced or manipulated, to engage in a sexual activity.</p>
                         <button id="button1" class="btn learn-more-btn btn-primary btn-lg">Learn More</button>
                         <div id="myModal1" class="modal">
-                            <div class="modal-content">
+                            <div class="modal-content ">
                                 <button type="button" class="close1 btn-close" aria-label="Close"></button>
                                 <p id="consent-modal-text">Sexual consent is a fundamental aspect of sexual health and well-being. It is essential to ensure that all individuals are respected, safe, and in control of their bodies. Consent must always be given freely, without any
                                     pressure or coercion. This means that it must not be obtained through physical force, emotional manipulation, or the abuse of power. Consent must also be informed, which means that all parties involved must have a clear
@@ -808,6 +808,43 @@
         }
 
 
+
+        function updateModalStyles(isDarkMode) {
+            const modalElements = document.querySelectorAll(".modal-content");
+            modalElements.forEach((modalContent) => {
+                if (isDarkMode) {
+                    // Apply styles for dark mode
+                    modalContent.style.backgroundColor = "#333";
+                    modalContent.style.color = "#FEFEFE";
+
+                } else {
+                    // Apply styles for light mode
+                    modalContent.style.backgroundColor = "#FEFEFE";
+                    modalContent.style.color = "#333";
+
+                }
+            });
+        }
+
+
+
+        function updateModalStyles(isDarkMode) {
+            const modalElements = document.querySelectorAll(".modal-content");
+            modalElements.forEach((modalContent) => {
+                if (isDarkMode) {
+                    // Apply styles for dark mode
+                    modalContent.style.backgroundColor = "#333";
+                    modalContent.style.color = "#FEFEFE";
+
+                } else {
+                    // Apply styles for light mode
+                    modalContent.style.backgroundColor = "#FEFEFE";
+                    modalContent.style.color = "#333";
+
+                }
+            });
+        }
+
         darkModeBtn.addEventListener("click", () => {
 
             /* navbar - section */
@@ -833,6 +870,12 @@
             featureIcon.forEach(function(element) {
                 element.classList.toggle("bg-gradient");
             });
+
+            document.body.classList.toggle("dark-mode");
+
+            const isDarkMode = document.body.classList.contains("dark-mode");
+
+            updateModalStyles(isDarkMode);
 
             document.body.classList.toggle("dark-mode");
 
