@@ -18,7 +18,7 @@
     <img src="assets/../public/assets/img/logo-real.png" alt="Logo" width="300" height="240">
   </a>
 
-<h3 align="center">Intima</h3>
+<h3 align="center"><a href="https://www.intima.tv/index.html"><strong>Intima »</strong></a></h3>
 
   <p align="center">
 Bridging the Gap in Sexual Education
@@ -89,9 +89,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Our ♥️ Contributors
 
-<a href="https://github.com/refinedev/refine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=arncv/Intima" />
+<a href="https://github.com/arncv/intima/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=arncv/intima" />
 </a>
+
 
 [contributors-shield]: https://img.shields.io/github/contributors/arncv/Intima.svg?style=for-the-badge
 [contributors-url]: https://github.com/arncv/Intima/graphs/contributors

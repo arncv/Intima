@@ -9,6 +9,7 @@ const chatForm = document.getElementById('chat-form');
         const messageEl = document.createElement('div');
         messageEl.className = 'message';
         messageEl.textContent = `You: ${message}`;
+        messageEl.style.background = '  background-color: #007BFF;'
         chatLog.appendChild(messageEl);
 
         fetch('/chat', {
@@ -30,3 +31,12 @@ const chatForm = document.getElementById('chat-form');
 
         messageInput.value = '';
       });
+      function goBack() {
+        window.history.back();
+      }
+      
+      function startChat() {
+        location.reload();
+      }
+      
+    

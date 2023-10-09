@@ -2,8 +2,23 @@
 :root {
     --body-bg: linear-gradient(135deg, #eeeeee 0%, #f5e4da 100%);
     --msger-bg: #fff;
-    --left-msg-bg: linear-gradient(to right, #f5e4da, #d5bbab);
+    --left-msg-bg: linear-gradient(to right, #f5e4da, #eeb283);
     --right-msg-bg: #d0d0d0;
+}
+/* For smartphones */
+@media screen and (max-width: 460px) {
+    .msger {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+/* For tablets */
+@media screen and (min-width: 460px) and (max-width: 1024px) {
+    .msger {
+        margin: 15px;
+        padding: 15px;
+    }
 }
 
 html {
@@ -32,21 +47,30 @@ body {
     flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 386px;
-    margin: 25px 10px;
-    border-radius: 10px;
-    height: calc(100% - 100px);
+    /* max-width: 100vw;
+    margin: 25px 10px; */
+    /* border-radius: 10px; */
+    height: 100%;
     background: var(--msger-bg);
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
 }
 
 .msger-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px;
-    border-radius: 10px 10px 0px 0px;
+
+
+    /* border-radius: 10px 10px 0px 0px; */
     background: #f5e4da;
+
     color: #666;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.msger-header button:hover {
+    color: orange; 
 }
 
 .msger-header-title {
@@ -63,6 +87,17 @@ body {
     letter-spacing: 1px;
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.msger-header button {
+    background-color: #f5e4da;
+    border: none;
+    color: #666;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .msger-chat {
@@ -144,9 +179,15 @@ body {
 .right-msg .msg-img {
     margin: 0 0 0 10px;
 }
+.message-input{
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
 .msger-inputarea {
     display: flex;
+    justify-content: center;
     padding: 10px;
     background: #f5e4da;
     border-radius: 0px 0px 10px 10px;
@@ -160,11 +201,20 @@ body {
 }
 
 .msger-input {
-    flex: 1;
+    width: 50%; /* Adjust this to change the initial width */
+    max-width: 70%; /* Adjust this to change the maximum width */
+    transition: width 0.2s ease-in-out; /* This makes the width change smoothly */
+    flex: none; /* This is needed because we're now controlling the width manually */
     background: transparent;
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.7);
 }
+
+.msger-input:focus {
+    width: 70%; /* Adjust this to change the width when focused */
+    border-color: black; /* This changes the border color when focused */
+}
+
 
 .msger-send-btn {
     margin-left: 10px;
@@ -177,6 +227,9 @@ body {
 .msger-chat {
     background-color: #fcfcfe;
 }
+
+  
+  
 
 
 /* ########################################### */
