@@ -276,6 +276,69 @@ share1.onclick = function () {
   navigator.clipboard.writeText(link);
   share_text1.innerHTML = "Copied!";
 };
+share2.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn2.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text2.innerHTML = "Copied!";
+};
+share3.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn3.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text3.innerHTML = "Copied!";
+};
+share4.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn4.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text4.innerHTML = "Copied!";
+};
+share5.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn5.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text5.innerHTML = "Copied!";
+};
+share6.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn6.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text6.innerHTML = "Copied!";
+};
+share7.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn7.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text7.innerHTML = "Copied!";
+};
+share8.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn8.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text8.innerHTML = "Copied!";
+};
+share9.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn9.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text9.innerHTML = "Copied!";
+};
+share10.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn10.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text10.innerHTML = "Copied!";
+};
 share11.onclick = function () {
   const link = `${window.location.protocol + "//" + window.location.host}/#${
     btn11.id
