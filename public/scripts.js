@@ -91,6 +91,9 @@ var modal8 = document.getElementById("myModal8");
 var modal9 = document.getElementById("myModal9");
 var modal10 = document.getElementById("myModal10");
 var modal11 = document.getElementById("myModal11");
+var modal12 = document.getElementById("myModal12");
+var modal13 = document.getElementById("myModal13");
+
 
 //Get the share button
 var share1 = document.getElementById("share_btn1");
@@ -104,6 +107,10 @@ var share8 = document.getElementById("share_btn8");
 var share9 = document.getElementById("share_btn9");
 var share10 = document.getElementById("share_btn10");
 var share11 = document.getElementById("share_btn11");
+var share12 = document.getElementById("share_btn12");
+var share13 = document.getElementById("share_btn13");
+
+
 
 //Get the share button text
 var share_text1 = document.getElementById("share_txt1");
@@ -117,6 +124,10 @@ var share_text8 = document.getElementById("share_txt8");
 var share_text9 = document.getElementById("share_txt9");
 var share_text10 = document.getElementById("share_txt10");
 var share_text11 = document.getElementById("share_txt11");
+var share_text12 = document.getElementById("share_txt12");
+var share_text13 = document.getElementById("share_txt13");
+
+
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("button1");
@@ -130,6 +141,10 @@ var btn8 = document.getElementById("button8");
 var btn9 = document.getElementById("button9");
 var btn10 = document.getElementById("button10");
 var btn11 = document.getElementById("button11");
+var btn12 = document.getElementById("button12");
+var btn13 = document.getElementById("button13");
+
+
 
 // Get the <span> element that closes the modal
 var span1 = document.getElementsByClassName("btn-close")[0];
@@ -143,6 +158,10 @@ var span8 = document.getElementsByClassName("btn-close")[7];
 var span9 = document.getElementsByClassName("btn-close")[8];
 var span10 = document.getElementsByClassName("btn-close")[9];
 var span11 = document.getElementsByClassName("btn-close")[10];
+var span12 = document.getElementsByClassName("btn-close")[11];
+var span13 = document.getElementsByClassName("btn-close")[12];
+
+
 
 
 // When the user clicks on the button, open the modal
@@ -189,6 +208,14 @@ btn11.onclick = function () {
   modal11.style.display = "block";
 };
 
+btn12.onclick = function () {
+  modal12.style.display = "block";
+};
+
+btn13.onclick = function () {
+  modal13.style.display = "block";
+};
+
 // When the user clicks on <span> (x), close the modal
 span1.onclick = function () {
   modal1.style.display = "none";
@@ -233,6 +260,14 @@ span11.onclick = function () {
   modal11.style.display = "none";
 };
 
+span12.onclick = function () {
+  modal12.style.display = "none";
+};
+
+span13.onclick = function () {
+  modal13.style.display = "none";
+};
+
 // When the user clicks on the share button, copy the link to the clipboard
 share1.onclick = function () {
   const link = `${window.location.protocol + "//" + window.location.host}/#${
@@ -247,6 +282,21 @@ share11.onclick = function () {
   }`;
   navigator.clipboard.writeText(link);
   share_text11.innerHTML = "Copied!";
+};
+
+share12.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn12.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text12.innerHTML = "Copied!";
+};
+share13.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn13.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text13.innerHTML = "Copied!";
 };
 
 window.onclick = function (event) {
@@ -273,6 +323,12 @@ window.onclick = function (event) {
   }
   else if (event.target == modal11) {
     modal11.style.display = "none";
+  }
+  else if (event.target == modal12) {
+    modal12.style.display = "none";
+  }
+  else if (event.target == modal13) {
+    modal13.style.display = "none";
   }
 };
 
@@ -304,3 +360,4 @@ function toggleReturnToTopButton() {
 // Add event listeners
 window.addEventListener("scroll", toggleReturnToTopButton);
 returnToTopButton.addEventListener("click", scrollToTop);
+  
