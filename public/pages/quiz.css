@@ -14,7 +14,8 @@ body{
     padding: 1.5rem;
     place-items: center;
     background-color: rgb(248, 188, 76);
-    background-image: linear-gradient(40deg,#fec8a0 30%,rgb(251, 244, 235) 100%);
+    background-image: linear-gradient(40deg,#fec8a0 30%,rgb(251, 244, 235) 100%); 
+    background-image: linear-gradient(0deg,#c99d7c 10%,rgb(241, 231, 219) 80%, rgb(240, 234, 226) 100%);
 }
 
 #nav-bar {
@@ -60,6 +61,9 @@ body{
 
 .quiz-section hr {
     border: 2px solid #9999994c;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  0 0 30px rgb(105, 76, 8);
 }
 
 #question{
@@ -81,6 +85,12 @@ li{
     border: 0.1rem solid rgb(210, 210, 210);
     padding: 1.5rem 1rem;
     font-weight: 600;
+    min-width: 40%;
+    min-height: 5rem;
+    border-radius: 7rem;
+    border: 0.2rem solid rgb(158, 107, 78);
+    padding: 0 7rem 0 3rem;
+    font-weight: bold;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -103,6 +113,7 @@ input[type="radio"]:checked{
 .btn{
     padding: 2rem 5rem;
     text-align: center;
+    height: 9rem;
 }
 button{
     padding: 0 5rem;
@@ -111,15 +122,19 @@ button{
     border-radius: 5rem;
     background-color: #eeb283;
     font-size: 1.6rem;
+    background-color: rgb(238, 178, 131);
+    border: .5px solid rgb(158, 107, 78);
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     transition: ease-in-out 0.4s;
 }
 button:hover{
     /* height: 4rem; */
+    margin-top: .5rem;
+    height: 4rem;
     text-align: center;
-    background-color: #d49e74;
-
+    background-color: rgb(158, 107, 78);
 }
 .result{
     width: 100%;
@@ -162,17 +177,17 @@ button:hover{
         width: 80%;
     }
     #question{
-        font-size: 4rem;
+        font-size: 3rem;
         padding: 3rem 5rem;
     }
     ul{
-        gap: 3.5rem;
+        gap: 3rem;
     }
     button{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     label{
-        font-size: 4rem;
+        font-size: 3rem;
         padding-left: 2.5rem;
     }
 } */

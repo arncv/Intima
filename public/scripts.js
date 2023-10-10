@@ -90,6 +90,7 @@ var modal7 = document.getElementById("myModal7");
 var modal8 = document.getElementById("myModal8");
 var modal9 = document.getElementById("myModal9");
 var modal10 = document.getElementById("myModal10");
+var modal11 = document.getElementById("myModal11");
 
 //Get the share button
 var share1 = document.getElementById("share_btn1");
@@ -102,6 +103,7 @@ var share7 = document.getElementById("share_btn7");
 var share8 = document.getElementById("share_btn8");
 var share9 = document.getElementById("share_btn9");
 var share10 = document.getElementById("share_btn10");
+var share11 = document.getElementById("share_btn11");
 
 //Get the share button text
 var share_text1 = document.getElementById("share_txt1");
@@ -114,6 +116,7 @@ var share_text7 = document.getElementById("share_txt7");
 var share_text8 = document.getElementById("share_txt8");
 var share_text9 = document.getElementById("share_txt9");
 var share_text10 = document.getElementById("share_txt10");
+var share_text11 = document.getElementById("share_txt11");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("button1");
@@ -126,6 +129,7 @@ var btn7 = document.getElementById("button7");
 var btn8 = document.getElementById("button8");
 var btn9 = document.getElementById("button9");
 var btn10 = document.getElementById("button10");
+var btn11 = document.getElementById("button11");
 
 // Get the <span> element that closes the modal
 var span1 = document.getElementsByClassName("btn-close")[0];
@@ -138,6 +142,8 @@ var span7 = document.getElementsByClassName("btn-close")[6];
 var span8 = document.getElementsByClassName("btn-close")[7];
 var span9 = document.getElementsByClassName("btn-close")[8];
 var span10 = document.getElementsByClassName("btn-close")[9];
+var span11 = document.getElementsByClassName("btn-close")[10];
+
 
 // When the user clicks on the button, open the modal
 btn1.onclick = function () {
@@ -178,6 +184,9 @@ btn9.onclick = function () {
 
 btn10.onclick = function () {
   modal10.style.display = "block";
+};
+btn11.onclick = function () {
+  modal11.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
@@ -220,6 +229,9 @@ span9.onclick = function () {
 span10.onclick = function () {
   modal10.style.display = "none";
 };
+span11.onclick = function () {
+  modal11.style.display = "none";
+};
 
 // When the user clicks on the share button, copy the link to the clipboard
 share1.onclick = function () {
@@ -228,6 +240,13 @@ share1.onclick = function () {
   }`;
   navigator.clipboard.writeText(link);
   share_text1.innerHTML = "Copied!";
+};
+share11.onclick = function () {
+  const link = `${window.location.protocol + "//" + window.location.host}/#${
+    btn11.id
+  }`;
+  navigator.clipboard.writeText(link);
+  share_text11.innerHTML = "Copied!";
 };
 
 window.onclick = function (event) {
@@ -251,6 +270,9 @@ window.onclick = function (event) {
     modal9.style.display = "none";
   } else if (event.target == modal10) {
     modal10.style.display = "none";
+  }
+  else if (event.target == modal11) {
+    modal11.style.display = "none";
   }
 };
 
