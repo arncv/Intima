@@ -11849,9 +11849,12 @@ footer a:hover, footer a:active, footer a:focus {
   align-self: center;
   width: 30px;
   height: 30px;
-  background-color: white;
   border-radius: 15px;
   cursor: pointer;
+}
+
+.color-invert {
+  filter: invert(1);
 }
 
 .masthead-bg {
