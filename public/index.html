@@ -972,32 +972,6 @@
 
         })
 
-        function validateForm() {
-            let form = document.getElementById("volunteerForm");
-            let isValid = true;
-
-            // Reset error messages
-            let errorElements = form.getElementsByClassName("error-message");
-            for (let i = 0; i < errorElements.length; i++) {
-                errorElements[i].textContent = "";
-            }
-            console.log(form.firstname)
-            // Check each input field
-            if (!form.firstname.checkValidity()) {
-                document.getElementById("firstname-error").innerText = "Please enter your first name.";
-                isValid = false;
-            }
-
-            if(isValid) {
-
-
-                return true;
-            }else {
-
-                return false;
-            }
-        }
-
         (function () {
             'use strict'
 
