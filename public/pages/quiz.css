@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'PT Serif', serif;
+    font-family: 'segoe ui', 'PT Serif', serif;
 }
 html{
     font-size: 60%;
@@ -11,47 +11,100 @@ html{
 body{
     height: 100vh;
     display: grid;
+    padding: 1.5rem;
     place-items: center;
     background-color: rgb(248, 188, 76);
-    background-image: linear-gradient(40deg,#eeb283 30%,rgb(247, 232, 215) 100%);
+    background-image: linear-gradient(40deg,#fec8a0 30%,rgb(251, 244, 235) 100%); 
+    background-image: linear-gradient(0deg,#c99d7c 10%,rgb(241, 231, 219) 80%, rgb(240, 234, 226) 100%);
 }
+
+#nav-bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    background: #fff;
+}
+
+#nav-bar .back-btn {
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    padding: 1rem 2rem; 
+    border-radius: .5rem;
+    transition: none;
+    background-color: #d49e74;
+}
+
+#nav-bar .back-btn:hover {
+    color: #fff;
+}
+#nav-bar .back-btn:hover svg {
+    fill: #fff;
+}
+
+#nav-bar .back-btn svg {
+    width: 15px;
+    height: 15px;
+    margin-right: .5rem;
+}
+
 .quiz-section{
-    width: 40%;
+    width: 100%;
     height: auto;
+    max-width: 550px;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.225);
+}
+
+.quiz-section hr {
+    border: 2px solid #9999994c;
     border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
     box-shadow:  0 0 30px rgb(105, 76, 8);
 }
+
 #question{
     font-size: 2.5rem;
-    padding: 1rem 5rem;
+    padding: 2rem 3rem;
 }
 ul{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 4rem 3rem;
 }
 li{
     list-style: none;
+    width: 100%;
+    border-radius: .5rem;
+    border: 0.1rem solid rgb(210, 210, 210);
+    padding: 1.5rem 1rem;
+    font-weight: 600;
     min-width: 40%;
     min-height: 5rem;
     border-radius: 7rem;
-    border: 0.2rem solid rgb(255, 255, 255);
+    border: 0.2rem solid rgb(158, 107, 78);
     padding: 0 7rem 0 3rem;
     font-weight: bold;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 label{
-    font-size: 1.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
     padding-left: 0.5rem;
 }
 input[type="radio"]{
     width: 15px;
     height: 15px;
+    margin-right: .5rem;
 }
 input[type="radio"]:checked{
     background-color: rgb(233, 195, 113);
@@ -60,35 +113,41 @@ input[type="radio"]:checked{
 .btn{
     padding: 2rem 5rem;
     text-align: center;
+    height: 9rem;
 }
 button{
     padding: 0 5rem;
     height: 5rem;
+    border: none;
     border-radius: 5rem;
-    border: 1px solid white;
     background-color: #eeb283;
     font-size: 1.6rem;
+    background-color: rgb(238, 178, 131);
+    border: .5px solid rgb(158, 107, 78);
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     transition: ease-in-out 0.4s;
 }
 button:hover{
+    /* height: 4rem; */
+    margin-top: .5rem;
     height: 4rem;
     text-align: center;
-    background-color: #d49e74;
-
+    background-color: rgb(158, 107, 78);
 }
 .result{
     width: 100%;
     height: auto;
     padding: 5rem;
-    background-color: #f8cba9;
-    border-radius: 0.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
     box-shadow: 0 0 30px rgb(105, 76, 8);
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
     align-items: center;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.225);
 }
 
 .result h3,.score{
@@ -98,7 +157,7 @@ button:hover{
     font-size: 2rem;
 }
 
-
+/* 
 
 @media (min-width: 200px) and (max-width: 450px) {
     .quiz-section{
@@ -118,17 +177,17 @@ button:hover{
         width: 80%;
     }
     #question{
-        font-size: 4rem;
+        font-size: 3rem;
         padding: 3rem 5rem;
     }
     ul{
-        gap: 3.5rem;
+        gap: 3rem;
     }
     button{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     label{
-        font-size: 4rem;
+        font-size: 3rem;
         padding-left: 2.5rem;
     }
-}
+} */

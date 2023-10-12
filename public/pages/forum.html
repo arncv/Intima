@@ -82,314 +82,322 @@
   }
 /*   Header Section    */
 
-header{
-    margin-inline: 10px;
-}
-  /* Nav Bar styles */
-.navbar{
-    display:flex;
-    align-items: center;
-}
-.navigation{
-    background-color:#52057b;
-    padding: 10px;
-    width: 65%;
-    display: inline-block;
-    border-radius: 5px;
-    max-height: 80px;
-    margin-right:10px;
-}
+        header {
+            margin-inline: 10px;
+        }
 
-.close-icon i{
-    font-size:60px;
-    float: left;
-    cursor: pointer;
-}
+        /* Nav Bar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
 
-.nav-list{
-    list-style-type:none;
-    overflow: hidden;
-}
+        .navigation {
+            background-color: #52057b;
+            padding: 10px;
+            width: 65%;
+            display: inline-block;
+            border-radius: 5px;
+            max-height: 80px;
+            margin-right: 10px;
+        }
 
-.nav-item a{
-    float: right;
-    display:block;
-    text-align: center;
-    margin-inline: 20px;
-    font-size: 20px;
-    padding: 10px;
-    color:#fff;
-}
+        .close-icon i {
+            font-size: 60px;
+            float: left;
+            cursor: pointer;
+        }
 
-.nav-item a:hover{
-    background-color: rgb(0,0,0,0.1);
-}
+        .nav-list {
+            list-style-type: none;
+            overflow: hidden;
+        }
 
-.hide{
-    display: none;
-}
+        .nav-item a {
+            float: right;
+            display: block;
+            text-align: center;
+            margin-inline: 20px;
+            font-size: 20px;
+            padding: 10px;
+            color: #fff;
+        }
 
-.bar-icon{
-    font-size: 60px;
-    display: inline-block;
-    margin-right:10px;
-    color: #fff;
-    cursor: pointer;
-}
+        .nav-item a:hover {
+            background-color: rgb(0, 0, 0, 0.1);
+        }
 
-@font-face {
-    font-family:aquire;
-    src:url(aquire.otf);
-}
+        .hide {
+            display: none;
+        }
 
-.brand{
-    font-size:60px;
-    display: inline-block;
-    font-family:aquire;
-}
+        .bar-icon {
+            font-size: 60px;
+            display: inline-block;
+            margin-right: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
 
-/*Navbar for the smartphones*/
-@media screen and (max-width: 460px){
-    .navigation{
-        max-height: auto;
-    }
-    
-    .close-icon i{
-        font-size:30px;
-    }
-    
-    .nav-item a{
-        float:left;
-        display:inline;
-        margin-inline: 3px;
-        font-size: 10px;
-        padding: 5px;
-    }
-    
-    
-    .bar-icon{
-        font-size: 30px;
-    }
- 
-    .brand{
-        font-size:20px;
-    }
-}
+        @font-face {
+            font-family: aquire;
+            src: url(aquire.otf);
+        }
 
-  /* Search Box styles */
-.search-box{
-    border: solid 1px #52057b;
-    margin-top: 20px;
-    padding: 40px;
-    display:flex;
-    justify-content: center;
-    box-shadow:1px 2px 3px #52057b;
-}
+        .brand {
+            font-size: 60px;
+            display: inline-block;
+            font-family: aquire;
+        }
 
-.search-box select{
-    padding: 10px;
-}
+        /*Navbar for the smartphones*/
+        @media screen and (max-width: 460px) {
+            .navigation {
+                max-height: auto;
+            }
 
-.search-box input{
-    padding: 10px;
-}
+            .close-icon i {
+                font-size: 30px;
+            }
 
-.search-box button{
-    padding: 10px;
-    background-color:#fff;
-    color:#000000;
-}
-
-.search-box button:hover{
-    background-color: #000000;
-    color: #fff;
-    box-shadow: 1px 2px 3px #fff;
-}
-
-/* search box for smrtphones */
-@media screen and (max-width: 460px){
-    .search-box input, .search-box button, .search-box select{
-        min-width: 300px;
-        margin-top: 5px;
-    }    
-
-}
-
-/* forum info Styling */
-.forum-info{
-    padding: 20px;
-    background-color: #111314;
-}
-
-.chart{
-    font-size:20px;
-    font-weight:bold;
-}
-/* Footer Styling */
-
-footer{
-    margin-top: 20px;
-    padding: 20px;
-    background-color:  #52057b;
-    display: block;
-    text-align: center;
-}
+            .nav-item a {
+                float: left;
+                display: inline;
+                margin-inline: 3px;
+                font-size: 10px;
+                padding: 5px;
+            }
 
 
-/*Categories*/
-/* Original styles for larger screens */
+            .bar-icon {
+                font-size: 30px;
+            }
 
-.category {
-    width: 33.33%;
-    float: left;
-    padding: 20px;
-}
+            .brand {
+                font-size: 20px;
+            }
+        }
 
-.category h2 {
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 24px;
-    margin-bottom: 10px;
-    background-color: #eeb283;
-}
+        /* Search Box styles */
+        .search-box {
+            border: solid 1px #52057b;
+            margin-top: 20px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 1px 2px 3px #52057b;
+        }
 
-.question-list {
-    list-style: none;
-    padding: 0;
-}
+        .search-box select {
+            padding: 10px;
+        }
 
-.question-item {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-}
+        .search-box input {
+            padding: 10px;
+        }
 
-.question-title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+        .search-box button {
+            padding: 10px;
+            background-color: #fff;
+            color: #000000;
+        }
 
-.question-description p {
-    width: 50%;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
+        .search-box button:hover {
+            background-color: #000000;
+            color: #fff;
+            box-shadow: 1px 2px 3px #fff;
+        }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .category {
-        width: 100%; 
-    }
+        /* search box for smrtphones */
+        @media screen and (max-width: 460px) {
 
-    .question-description p {
-        width: 100%;
-    }
-}
+            .search-box input,
+            .search-box button,
+            .search-box select {
+                min-width: 300px;
+                margin-top: 5px;
+            }
+
+        }
+
+        /* forum info Styling */
+        .forum-info {
+            padding: 20px;
+            background-color: #111314;
+        }
+
+        .chart {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #52057b;
+            display: block;
+            text-align: center;
+        }
 
 
-/* ########################################### */
-/*            posts.html                       */
-/* ########################################### */
+        /*Categories*/
+        /* Original styles for larger screens */
 
-/* posts table's head  */
-.table-head{
-    display: flex;
-}
+        .category {
+            width: 33.33%;
+            float: left;
+            padding: 20px;
+        }
 
-.table-head div{
-    padding: 5px;
-    margin: 2px;
-    background-color: #2C2C2C;
-    font-weight: bold;
-}
+        .category h2 {
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            background-color: #eeb283;
+        }
 
-.table-head .status{
-    flex: 5%;
-}
+        .question-list {
+            list-style: none;
+            padding: 0;
+        }
 
-.table-head .subjects{
-    flex: 70%;
-}
+        .question-item {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
 
-.table-head .replies{
-    flex: 10%;
-}
+        .question-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-.table-head .last-reply{
-    flex: 15%;
-}
+        .question-description p {
+            width: 50%;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
 
-/* posts table's body  */
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .category {
+                width: 100%;
+            }
 
-.table-row{
-    display: flex;
-}
+            .question-description p {
+                width: 100%;
+            }
+        }
 
-.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
-    padding: 5px;
-    margin: 2px;
-    background-color: #131415;
-}
 
-.table-row .status{
-    flex: 5%;
-    font-size: 30px;
-    text-align: center;
-}
+        /* ########################################### */
+        /*            posts.html                       */
+        /* ########################################### */
 
-.table-row .subjects{
-    flex: 70%;
-}
+        /* posts table's head  */
+        .table-head {
+            display: flex;
+        }
 
-.table-row .replies{
-    flex: 10%;
-}
+        .table-head div {
+            padding: 5px;
+            margin: 2px;
+            background-color: #2C2C2C;
+            font-weight: bold;
+        }
 
-.table-row .last-reply{
-    flex: 15%;
-}
+        .table-head .status {
+            flex: 5%;
+        }
 
-/* navigation path*/
-.navigate{
-    margin-block: 20px;
-    font-weight: lighter;
-    font-size: 24px;
-}
+        .table-head .subjects {
+            flex: 70%;
+        }
 
-.navigate a{
-    color: #fff;
-}
+        .table-head .replies {
+            flex: 10%;
+        }
 
-.navigate a:hover{
-    color:#FF0042;
-    font-weight: bolder;
-}
+        .table-head .last-reply {
+            flex: 15%;
+        }
 
-/* Pagination*/
+        /* posts table's body  */
 
-.pagination{
-    padding: 20px;
-    font-size: 15px;
-}
+        .table-row {
+            display: flex;
+        }
 
-.pagination a{
-    color: #fff;
-    margin-inline: 5px;
-    padding: 5px 10px;
-    border: solid 0.5px #fff;
-}
+        .table-row .status,
+        .table-row .subjects,
+        .table-row .replies,
+        .table-row .last-reply {
+            padding: 5px;
+            margin: 2px;
+            background-color: #131415;
+        }
 
-.pagination a:hover{
-    opacity: 0.5;
-}
+        .table-row .status {
+            flex: 5%;
+            font-size: 30px;
+            text-align: center;
+        }
 
-.note{
-    background-color:#111314;
-    margin: 20px;
-    padding: 20px;
-}
-} */
+        .table-row .subjects {
+            flex: 70%;
+        }
+
+        .table-row .replies {
+            flex: 10%;
+        }
+
+        .table-row .last-reply {
+            flex: 15%;
+        }
+
+        /* navigation path*/
+        .navigate {
+            margin-block: 20px;
+            font-weight: lighter;
+            font-size: 24px;
+        }
+
+        .navigate a {
+            color: #fff;
+        }
+
+        .navigate a:hover {
+            color: #FF0042;
+            font-weight: bolder;
+        }
+
+        /* Pagination*/
+
+        .pagination {
+            padding: 20px;
+            font-size: 15px;
+        }
+
+        .pagination a {
+            color: #fff;
+            margin-inline: 5px;
+            padding: 5px 10px;
+            border: solid 0.5px #fff;
+        }
+
+        .pagination a:hover {
+            opacity: 0.5;
+        }
+
+        .note {
+            background-color: #111314;
+            margin: 20px;
+            padding: 20px;
+        }
 
         .subforum {
             margin-top: 20px;
@@ -903,184 +911,236 @@ footer{
             background: rgb(14, 12, 37);
             color: white;
         }
-    }
-    .forum-header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .question-list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    .question-item {
-      padding: 15px;
-      border-bottom: 1px solid #e0e0e0;
-      cursor: pointer;
-    }
-    .question-item:last-child {
-      border-bottom: none;
-    }
-    .question-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 0;
-    }
-    .question-description {
-      margin: 5px 0 0;
-      color: #777;
-    }
-    .submit-form {
-      margin-bottom: 20px;
-    }
-    .submit-form input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      box-sizing: border-box;
-    }
-    .post-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 30px 0 10px;
-      box-sizing: border-box;
-      border: rgb(199, 190, 190) 1px solid;
-      background-color: white;
-      
-      
 
-    }
-    .post-form button {
-      padding: 10px;
-     border-radius: 6px;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      background-color: #FB923C;
-      width: 100px;
-      text-align: center;
-    }
-    }
+        .forum-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-        </style>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-white" id="mainNav">
-            <div class="container px-5   ">
-                <a class="logo navbar-brand fw-bold" href="../index.html"><img src="../assets/img/removebg.png" alt="logo" style="width: 70px;">intima</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="bi-list"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item ">
-                            <a class="nav-link me-lg-3 " href="../index.html#aboutus"  role="button" aria-expanded="false">
-                                About Us
-                            </a>
-                        </li>
-                        
-                                <li class="nav-item">
-                                    <a class="nav-link me-lg-3 " href="../index.html#Resources"  role="button" aria-expanded="false">
-                                        Resources
-                                    </a>
-                                </li>
-                                                
-                            </ul>
-                    
-                            <a href="../index.html#Bot">
-                                <button class="btn btn-primary rounded-pill px-3 py-2 mb-2 mb-lg-0">
-                                    <span class="d-flex align-items-center">
-                                        <i class="bi-chat-text-fill me-2"></i>
-                                        <span class="large">Go To Bot</span>
-                                    </span>
-                                </button>
-                              </a>
-                              
-                </div>
-                
+        .question-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .question-item {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+        }
+
+        .question-item:last-child {
+            border-bottom: none;
+        }
+
+        .question-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .question-description {
+            margin: 5px 0 0;
+            color: #777;
+        }
+
+        .submit-form {
+            margin-bottom: 20px;
+        }
+
+        .submit-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .post-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 30px 0 10px;
+            box-sizing: border-box;
+            border: rgb(199, 190, 190) 1px solid;
+            background-color: white;
+
+
+
+        }
+
+        .post-form button {
+            padding: 10px;
+            border-radius: 6px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background-color: #FB923C;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-white" id="mainNav">
+        <div class="container px-5   ">
+            <a class="logo navbar-brand fw-bold" href="../index.html"><img src="../assets/img/removebg.png" alt="logo"
+                    style="width: 70px;">intima</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link me-lg-3 " href="../index.html#aboutus" role="button" aria-expanded="false">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3 " href="../index.html#Resources" role="button" aria-expanded="false">
+                            Resources
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="../index.html#Bot">
+                    <button class="btn btn-primary rounded-pill px-3 py-2 mb-2 mb-lg-0">
+                        <span class="d-flex align-items-center">
+                            <i class="bi-chat-text-fill me-2"></i>
+                            <span class="large">Go To Bot</span>
+                        </span>
+                    </button>
+                </a>
+
             </div>
-        </nav>
-        <!-- Mashead header-->
-        <header class="masthead">
-            <div class="container-fluid px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6" style="width: 100%;">
-                        <div class="forum-header">
-                            <h1 id="forum-title">Intima Forum - Sex Education</h1>
 
-                            <p>Ask questions and get answers about sex education.</p>
+        </div>
+    </nav>
+    <!-- Mashead header-->
+    <header class="masthead">
+        <div class="container-fluid px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6" style="width: 100%;">
+                    <div class="forum-header">
+                        <h1 id="forum-title">Intima Forum - Sex Education</h1>
+
+                        <p>Ask questions and get answers about sex education.</p>
 
 
-                          <div class="category">
+                        <div class="category">
                             <h2>Sexual Health Myths
 
                             </h2>
                             <ul class="question-list">
                                 <!-- Questions from Category 1 -->
                                 <li class="question-item">
-                                    <p class="question-title">1-What are some common myths about sexual health that people should be aware of?</p>
-                                    <p class="question-description">Common myths include the belief that you can't get pregnant the first time you have sex, that certain positions prevent pregnancy, and that you can't get an STI from oral sex. It's important to seek accurate information from reliable sources to debunk these myths.</p>
+                                    <p class="question-title">1-What are some common myths about sexual health that
+                                        people should be aware of?</p>
+                                    <p class="question-description">Common myths include the belief that you can't get
+                                        pregnant the first time you have sex, that certain positions prevent pregnancy,
+                                        and that you can't get an STI from oral sex. It's important to seek accurate
+                                        information from reliable sources to debunk these myths.</p>
                                     </br>
                                     <p class="question-title">2-Can pre-ejaculation cause pregnancy?</p>
-                                    <p class="question-description">Yes, pre-ejaculation, also known as precum, can potentially cause pregnancy. Precum may contain sperm cells from a previous ejaculation, which can lead to conception if it comes into contact with the vagina during sexual intercourse. While the risk is generally lower than with a full ejaculation, it's still possible. Using contraception methods, such as condoms,can significantly reduce the risk of pregnancy and protect against sexually transmitted infections (STIs).</p>
+                                    <p class="question-description">Yes, pre-ejaculation, also known as precum, can
+                                        potentially cause pregnancy. Precum may contain sperm cells from a previous
+                                        ejaculation, which can lead to conception if it comes into contact with the
+                                        vagina during sexual intercourse. While the risk is generally lower than with a
+                                        full ejaculation, it's still possible. Using contraception methods, such as
+                                        condoms,can significantly reduce the risk of pregnancy and protect against
+                                        sexually transmitted infections (STIs).</p>
                                     </br>
-                                    <p class="question-title">3-Is there a connection between masturbation and the development of facial pimples or acne?</p>
-                                    <p class="question-description">No,there is generally no direct connection between masturbation and the development of facial pimples or acne. Acne is primarily caused by factors such as hormonal changes, genetics, excess oil production, and the presence of certain bacteria on the skin. Masturbation does not have a significant impact on these factors, and it is not a direct cause of acne.</p>
+                                    <p class="question-title">3-Is there a connection between masturbation and the
+                                        development of facial pimples or acne?</p>
+                                    <p class="question-description">No,there is generally no direct connection between
+                                        masturbation and the development of facial pimples or acne. Acne is primarily
+                                        caused by factors such as hormonal changes, genetics, excess oil production, and
+                                        the presence of certain bacteria on the skin. Masturbation does not have a
+                                        significant impact on these factors, and it is not a direct cause of acne.</p>
                                 </li>
-    
-                               
+
+
                             </ul>
                         </div>
-                    
+
                         <div class="category">
                             <h2>Contraception and Reproductive Health</h2>
                             <ul class="question-list">
                                 <!-- Questions from Category 2 -->
                                 <li class="question-item">
-                                    <p class="question-title">4-How can I talk to my partner about using contraception?</p>
-                                    <p class="question-description">Open and honest communication is key. Start by expressing your desire to use contraception and explain your reasons. Listen to your partner's thoughts and concerns, and work together to find a method that works for both of you.</p>
+                                    <p class="question-title">4-How can I talk to my partner about using contraception?
+                                    </p>
+                                    <p class="question-description">Open and honest communication is key. Start by
+                                        expressing your desire to use contraception and explain your reasons. Listen to
+                                        your partner's thoughts and concerns, and work together to find a method that
+                                        works for both of you.</p>
                                     </br>
-                    
-                                    <p class="question-title">5-What types of lubricants are safe to use with condoms?</p>
-                                    <p class="question-description">Water-based and silicone-based lubricants are generally safe to use with condoms. These types of lubricants are less likely to cause condom breakage or deterioration compared to oil-based lubricants. However, it's essential to check the specific product labels and packaging for any compatibility information provided by the manufacturer. Always follow the instructions and recommendations provided by the condom and lubricant manufacturers to ensure maximum effectiveness and safety.</p>
+
+                                    <p class="question-title">5-What types of lubricants are safe to use with condoms?
+                                    </p>
+                                    <p class="question-description">Water-based and silicone-based lubricants are
+                                        generally safe to use with condoms. These types of lubricants are less likely to
+                                        cause condom breakage or deterioration compared to oil-based lubricants.
+                                        However, it's essential to check the specific product labels and packaging for
+                                        any compatibility information provided by the manufacturer. Always follow the
+                                        instructions and recommendations provided by the condom and lubricant
+                                        manufacturers to ensure maximum effectiveness and safety.</p>
                                     </br>
-                               <p class="question-title">6-What are the distinctions between birth control pills, emergency contraception, and abortion pills?</p>
-                               <p class="question-description">Birth control pills are primarily used for preventing pregnancy, emergency contraception is a backup option to prevent pregnancy, and abortion pills are used to terminate an existing pregnancy.It's essential to consult with a healthcare provider for guidance.</p>
+                                    <p class="question-title">6-What are the distinctions between birth control pills,
+                                        emergency contraception, and abortion pills?</p>
+                                    <p class="question-description">Birth control pills are primarily used for
+                                        preventing pregnancy, emergency contraception is a backup option to prevent
+                                        pregnancy, and abortion pills are used to terminate an existing pregnancy.It's
+                                        essential to consult with a healthcare provider for guidance.</p>
                                 </li>
-                     
+
                             </ul>
                         </div>
-                    
+
                         <div class="category">
                             <h2>LGBTQ+ Support and Other Topics</h2>
                             <ul class="question-list">
                                 <!-- Questions from Category 3 -->
                                 <li class="question-item">
-                                    <p class="question-title">7-How can I support a friend who has recently come out as LGBTQ+?</p>
-                                    <p class="question-description">Show your friend that you care and that you're there for them. Respect their privacy and don't share their news with others without their permission. Educate yourself about LGBTQ+ issues and be an ally by challenging discrimination and supporting equality.</p>
+                                    <p class="question-title">7-How can I support a friend who has recently come out as
+                                        LGBTQ+?</p>
+                                    <p class="question-description">Show your friend that you care and that you're there
+                                        for them. Respect their privacy and don't share their news with others without
+                                        their permission. Educate yourself about LGBTQ+ issues and be an ally by
+                                        challenging discrimination and supporting equality.</p>
                                     </br>
-                                    <p class="question-title">8-What are some resources or organizations that provide support and information for LGBTQ+ individuals and their allies?
+                                    <p class="question-title">8-What are some resources or organizations that provide
+                                        support and information for LGBTQ+ individuals and their allies?
                                         ?</p>
-                                    <p class="question-description">NCTE advocates for policy change and social acceptance of transgender people. They provide resources on transgender rights and issues.</p>
+                                    <p class="question-description">NCTE advocates for policy change and social
+                                        acceptance of transgender people. They provide resources on transgender rights
+                                        and issues.</p>
                                     </br>
-                                    <p class="question-title">9-What are some common challenges that LGBTQ+ individuals may face after coming out, and how can I help my friend navigate these challenges? </p>
-                                    <p class="question-description">Be a source of unconditional love and acceptance. Listen to your friend without judgment, and stand up against discrimination or homophobic/transphobic remarks when you encounter them.</p>
+                                    <p class="question-title">9-What are some common challenges that LGBTQ+ individuals
+                                        may face after coming out, and how can I help my friend navigate these
+                                        challenges? </p>
+                                    <p class="question-description">Be a source of unconditional love and acceptance.
+                                        Listen to your friend without judgment, and stand up against discrimination or
+                                        homophobic/transphobic remarks when you encounter them.</p>
                                 </li>
-                               
+
                             </ul>
                         </div>
-                          <div class="post-form">
-                            <textarea id="postContent" rows="4" style="width: 100%;" placeholder="Write your question here and our experts will answers them! "></textarea><br>
+                        <div class="post-form">
+                            <textarea id="postContent" rows="4" style="width: 100%;"
+                                placeholder="Write your question here and our experts will answers them! "></textarea><br>
                             <button onclick="submitPost()">Submit</button>
 
-                          </div>
-                          <ul class="post-list" id="postList"></ul>
                         </div>
-            </div>
+                        <ul class="post-list" id="postList"></ul>
+                    </div>
+                </div>
 
-        </div>
+            </div>
     </header>
     <!-- App badge section-->
 
@@ -1127,6 +1187,7 @@ footer{
             /* navbar - section */
             navBar.classList.toggle("bg-white");
             navBar.classList.toggle("navbar-dark");
+            darkModeBtn.classList.toggle("color-invert")
             /* masthead - section */
             // masthead.classList.toggle("bg-white");
             masthead.classList.toggle("masthead-bg");
@@ -1136,6 +1197,30 @@ footer{
             resources.classList.toggle("resources-bg");
             resources.classList.toggle("bg-gradient")
         })
+
+        window.onload = () => {
+
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+                /* navbar - section */
+                navBar.classList.toggle("bg-white");
+                navBar.classList.toggle("navbar-dark");
+                darkModeBtn.classList.toggle("color-invert")
+                /* masthead - section */
+                // masthead.classList.toggle("bg-white");
+                masthead.classList.toggle("masthead-bg");
+                /* features - section */
+                features.classList.toggle("features-bg");
+                /* Resources - section */
+                resources.classList.toggle("resources-bg");
+                resources.classList.toggle("bg-gradient")
+
+
+                document.body.classList.toggle("dark-mode");
+            } else {
+                document.body.classList.remove("dark-mode");
+            }
+        }
     </script>
 </body>
 
