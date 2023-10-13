@@ -80,10 +80,15 @@
                         <span class="small">Go To Bot</span>
                     </span>
                 </button>
-                <a href="#" class="mx-3" id="en">English</a>
-                <a href="#" id="hi">हिंदी</a>
+                <div class="dropdown">
+  					<button class="dropbtn">Select Language</button>
+  					<div class="dropdown-content">
+    					<a onclick="updateContent('en')" class="mx-3" id="en">English</a>
+    					<a onclick="updateContent('hi')" class="mx-3" id="hi">हिंदी</a>
+  					</div>
+				</div>
             </div>
-
+            
         </div>
     </nav>
     <!-- Mashead header-->
@@ -93,16 +98,20 @@
                 <div class="col-lg-6">
                     <!-- Mashead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-1 lh-1 mb-3">Revolutionizing Sex Education in India.</h1>
-                        <p class="lead fw-normal text-muted mb-5">Redefining the way we approach sexual education</p>
+
+                        <h1 id="tagline" class="display-1 lh-1 mb-3">Revolutionizing Sex Education in India.</h1> 
+                        <p id="tagline2" class="lead fw-normal text-muted mb-5">Redefining the way we approach sexual education</p>
+
                         <div class="d-flex flex-column flex-lg-row align-items-center ">
                             <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
                                 onclick="scrollToSection('#Bot')">
 
-                                <span class="d-flex align-items-center">
-                                    <i class="bi-chat-text-fill me-2"></i>
-                                    <span class="small">Get Started</span>
-                                </span>
+
+                                    <span class="d-flex align-items-center">
+                                        <i class="bi-chat-text-fill me-2"></i>
+                                        <span id="get-Started" class="small">Get Started</span>
+                                    </span>
+
                             </button>
                             <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 mx-3"
                                 onclick="window.location.href='pages/quiz.html';">
@@ -1087,7 +1096,8 @@
     <!-- Dark mode JS-->
     <!-- Core theme JS-->
     <script src="scripts.js"></script>
-    <script src="translation.js"></script>
+    	<script type="text/javascript" src="./translation.js"></script>
+
 
     <script defer src="/_vercel/insights/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

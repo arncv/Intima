@@ -254,14 +254,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Language switcher event listener 
 
     document.getElementById('en').addEventListener("click", function () {
-        currentLanguage = "en"
+        currentLanguage = "en";
         updateContent(currentLanguage);
     })
 
     document.getElementById('hi').addEventListener('click', function () {
-        currentLanguage = "hi"
+        currentLanguage = "hi";
         updateContent(currentLanguage)
     })
 
 
 })
+
