@@ -6,10 +6,11 @@ body {
 .msger {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -34,7 +35,8 @@ body {
 
 .msg {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-end;
     margin-bottom: 10px;
 }
 
@@ -47,7 +49,7 @@ body {
 }
 
 .msg-bubble, .message-reply {
-    background-color: #007BFF;
+    background-color: #eeb283;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
@@ -65,6 +67,8 @@ body {
 
 .msger-inputarea {
     display: flex;
+    gap: 27px;
+    width: 100%;
     align-items: center;
     padding: 10px;
     background-color: #fff;
@@ -72,9 +76,6 @@ body {
     border-radius: 0 0 10px 10px;
 }
 
-label {
-    display: none;
-}
 
 .msger-input {
     flex-grow: 1;
@@ -84,7 +85,7 @@ label {
 }
 
 .msger-send-btn {
-    background-color: #007BFF;
+    background-color: #eeb283;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -97,5 +98,39 @@ label {
 }
 
 .msger-send-btn:hover {
-    background-color: #0056b3;
+    background-color:#f59349;
+}
+.btn{
+    background-color: #eeb283;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 2rem;
+}
+#back-btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 11rem;
+}
+@media (min-width: 250px) and (max-width: 372px) {
+    .msger{
+        width: 100%;
+        height: 100%;
+    }
+    .msger-inputarea{
+        gap: px;
+    }
+    label{
+        display: none;
+    }
+    #back-btn{
+        gap: 8rem;
+    }
+}
+@media (min-width: 372px) and (max-width: 600px) {
+    #back-btn{
+        gap: 15rem;
+    }
 }
