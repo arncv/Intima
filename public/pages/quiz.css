@@ -18,37 +18,37 @@ body{
     background-image: linear-gradient(0deg,#c99d7c 10%,rgb(241, 231, 219) 80%, rgb(240, 234, 226) 100%);
 }
 
-#nav-bar {
-    top: 0;
-    left: 0;
+.topnav {
+    background-color: whitesmoke;
+    overflow: hidden;
     width: 100%;
-    padding: 1rem;
-    position: absolute;
-    background: #fff;
-}
 
-#nav-bar .back-btn {
-    display: flex;
-    font-size: 1.5em;
-    align-items: center;
-    padding: 1rem 2rem; 
-    border-radius: .5rem;
-    transition: none;
-    background-color: #d49e74;
-}
-
-#nav-bar .back-btn:hover {
-    color: #fff;
-}
-#nav-bar .back-btn:hover svg {
-    fill: #fff;
-}
-
-#nav-bar .back-btn svg {
-    width: 15px;
-    height: 15px;
-    margin-right: .5rem;
-}
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: whitesmoke;
+    font-family: aquire;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .topnav .icon {
+    display: none;
+  }
 
 .quiz-section{
     width: 100%;
@@ -156,6 +156,30 @@ button:hover{
 .result p{
     font-size: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
 
 /* 
 
