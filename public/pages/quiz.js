@@ -114,6 +114,7 @@ const quiz=document.querySelector("#quiz");
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] = document.querySelectorAll("#question, #option_1, #option_2, #option_3, #option_4");
 const submitBtn = document.querySelector("#submit");
+const next = document.querySelector("#next");
 let currentQuiz = 0;
 let score = 0;
 const loadQuiz = () => {
@@ -135,6 +136,7 @@ const getSelectedOption=()=>{
 const deselected=()=>{
     return answerElm.forEach((currElm)=>(currElm.checked=false));
 }
+
 submitBtn.addEventListener('click',()=>{
     const selectedOptionIndex=getSelectedOption();
     if(selectedOptionIndex === quizData[currentQuiz].correct){
@@ -167,3 +169,32 @@ submitBtn.addEventListener('click',()=>{
     }
 
 });
+
+next.addEventListener('click', ()=>{
+    currentQuiz++;
+
+    if(currentQuiz<quizData.length){
+        deselected();
+        loadQuiz();
+    }
+    else{
+        quiz.innerHTML=`
+            <div class="result">
+            <h3>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h3>
+            <p class="para"></p>
+            <button class="reload-button" onclick="location.reload()">Play Again ↻</button>
+            </div>
+        `;
+        const para=document.querySelector(".para");
+        if(score>=7){
+            para.innerText="😀 Congratulation! you have good Knowledge of sexual health 🎉";
+        }
+        else if(score>=4 && score<7){
+            para.innerText="Good 🙂, But you need to know more about Sex Education. You can check out Resources Section";
+        }
+        else{
+            para.innerText="sorry 😔! you are not aware of Sex education. Read more from our Resources Section.";
+        }
+
+    }
+})
