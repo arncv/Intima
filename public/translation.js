@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const tagline = document.getElementById("tagline");
     const tagline2 = document.getElementById("tagline2");
     const getStartedBtn = document.getElementById('get-Started');
@@ -20,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resourceHeading = document.getElementById("resource-heading");
 
     const learnMoreBtn = document.querySelectorAll('.learn-more-btn');
+
 
     const consentHeading = document.getElementById('consent-heading');
     const consentText = document.getElementById('consent-text');
@@ -57,6 +57,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const sexualOrientation = document.getElementById('sexual-orientation');
     const sexualOrientationText = document.getElementById('sexual-orientation-text');
     const sexualOrientationModalText = document.getElementById('sexual-orientaion-modal-text');
+
+    const parentalGuidanceHeading = document.getElementById('parental-guidance');
+    const parentGuidancePara = document.getElementById('parental-guidance-para');
+    const parentalGuidanceModalText = document.getElementById('parental-guidance-modal-text');
+
+    const noFapHeading = document.getElementById('nofap-heading');
+    const noFapPara = document.getElementById('nofap-para');
+    const noFapModalText = document.getElementById('nofap-modal-text');
+
+    const sexualMentalHealthHeading = document.getElementById('sexual-mental-health-heading');
+    const sexualMentalHealthPara  = document.getElementById('sexual-mental-health-para');
+    const sexualMentalHealthModalText = document.getElementById('sexual-mental-health-modal-text');
+
+    const culturalReligiousHeading = document.getElementById('cultural-religious-heading');
+    const culturalReligiousPara = document.getElementById('cultural-religious-para');
+    const culturalReligiousModalText = document.getElementById('cultural-religious-modal-text');
 
     // default language 
 
@@ -118,8 +134,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
            'sexualOrientation':'Sexual Orientations',
            'sexualOrientationText':'Sexual orientation refers to a person\'s emotional, romantic, and sexual attraction to others. It is an important aspect of our identity, and everyone has their unique sexual orientation. Understanding sexual orientation is crucial for creating a safe and accepting environment for people of all sexual orientations.',
-           'sexualOrientationModalText':'Sexual orientation is a broad term that encompasses different categories of sexual attraction. The most common sexual orientations are heterosexual, homosexual, and bisexual. Heterosexual individuals are attracted to people of the opposite gender, homosexual individuals are attracted to people of the same gender, and bisexual individuals are attracted to both. Other sexual orientations include pansexual, asexual, and demisexual. It is essential to understand that sexual orientation is not a choice, and people cannot change their sexual orientation. Supporting individuals of all sexual orientations and creating an inclusive environment is crucial for promoting positive sexual health.'
+           'sexualOrientationModalText':'Sexual orientation is a broad term that encompasses different categories of sexual attraction. The most common sexual orientations are heterosexual, homosexual, and bisexual. Heterosexual individuals are attracted to people of the opposite gender, homosexual individuals are attracted to people of the same gender, and bisexual individuals are attracted to both. Other sexual orientations include pansexual, asexual, and demisexual. It is essential to understand that sexual orientation is not a choice, and people cannot change their sexual orientation. Supporting individuals of all sexual orientations and creating an inclusive environment is crucial for promoting positive sexual health.',
 
+           'parentalGuidanceHeading':'Parental Guidance',
+           'parentalGuidancePara':'Effective communication with children and adolescents about sexual health and education is crucial, and it should begin early and be age-appropriate. Parents should create a safe and judgment-free space where their children feel comfortable discussing these topics, emphasizing that questions and concerns are welcome.',
+           'parentalGuidanceModalText':'Promoting healthy relationships, respect, consent, and communication is crucial as well. Discussing puberty and its physical and emotional changes before they occur helps children prepare. Safe sex and protection should be discussed as children mature, stressing the importance of contraception and protection against sexually transmitted infections (STIs). Parents should also address peer pressure and teach their children to recognize and resist it, empowering them to make informed decisions. Respecting privacy, particularly during adolescence, is important, as is being a positive role model in terms of healthy attitudes and behaviors related to relationships and sexuality.'
+           ,
+           'noFapHeading':'no Fap',
+           'noFapPara':'NoFap is the idea of treating both pornography and masturbation as addictions that need to be treated through self-control, self-improvement and a cold-turkey break with internet porn.NoFap isn’t really a new concept — abstinence and anti-masturbation movements have been around for centuries.Learn more about it by clicking below.',
+           'noFapModalText':'Internet pornography is bad for your brain and avoiding it is good for your mental health. Masturbation is generally bad for your health (particularly in excess) and abstaining from masturbation is, therefore, good for it.NoFap claims that porn and masturbation addiction cause problems. It may lead to brain fog, low self-esteem and many other issues.Individuals who want to stop masturbating can get support from the NoFap community.',
+
+           'sexualMentalHealthHeading':'Sexual and Mental Health',
+           'sexualMentalHealthPara':'Sexual health and mental health are closely intertwined, with mental well-being significantly impacting sexual experiences. A fulfilling sex life can enhance self-esteem and emotional intimacy, positively affecting mental health. Open communication and support are key to maintaining this essential balance.',
+           'sexualMentalHealthModalText':'Exploring sexual health education can help individuals make informed decisions about their sexual well-being. Here are some important aspects to consider:',
+
+
+          'culturalReligiousHeading':'Cultural and Religious Perspectives',
+          'culturalReligiousPara':'Cultural and religious perspectives play a vital role in shaping individuals\' beliefs and values regarding sexual health and relationships. These diverse perspectives can influence attitudes toward topics such as contraception, sexual orientation, and premarital sex. Understanding and respecting these viewpoints is essential in providing comprehensive sexual health education and support that considers the cultural and religious backgrounds of individuals.',
+         ' culturalReligiousModalText':'Cultural and religious perspectives strongly shape attitudes toward sexual health. These viewpoints impact decisions related to sexual behavior, family planning, and gender roles, emphasizing the importance of culturally sensitive sexual health education and support.'
         },
         'hi': {
             'tagline': 'भारत में यौन शिक्षा में क्रांति लाना।',
@@ -174,7 +206,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
             'sexualOrientation':'यौन अभिविन्यास',
             'sexualOrientationText':'यौन रुझान किसी व्यक्ति के दूसरों के प्रति भावनात्मक, रोमांटिक और यौन आकर्षण को दर्शाता है। यह हमारी पहचान का एक महत्वपूर्ण पहलू है, और हर किसी का अपना विशिष्ट यौन रुझान होता है। सभी यौन रुझानों वाले लोगों के लिए एक सुरक्षित और स्वीकार्य वातावरण बनाने के लिए यौन रुझान को समझना महत्वपूर्ण है।',
-            'sexualOrientationModalText':'यौन रुझान एक व्यापक शब्द है जो यौन आकर्षण की विभिन्न श्रेणियों को शामिल करता है। सबसे आम यौन रुझान विषमलैंगिक, समलैंगिक और उभयलिंगी हैं। विषमलैंगिक व्यक्ति विपरीत लिंग के लोगों के प्रति आकर्षित होते हैं, समलैंगिक व्यक्ति समान लिंग के लोगों के प्रति आकर्षित होते हैं, और उभयलिंगी व्यक्ति दोनों के प्रति आकर्षित होते हैं। अन्य यौन रुझानों में पैनसेक्सुअल, अलैंगिक और डेमिसेक्सुअल शामिल हैं। यह समझना आवश्यक है कि यौन रुझान कोई विकल्प नहीं है और लोग अपना यौन रुझान नहीं बदल सकते। सकारात्मक यौन स्वास्थ्य को बढ़ावा देने के लिए सभी यौन रुझानों वाले व्यक्तियों का समर्थन करना और एक समावेशी वातावरण बनाना महत्वपूर्ण है।'
+            'sexualOrientationModalText':'यौन रुझान एक व्यापक शब्द है जो यौन आकर्षण की विभिन्न श्रेणियों को शामिल करता है। सबसे आम यौन रुझान विषमलैंगिक, समलैंगिक और उभयलिंगी हैं। विषमलैंगिक व्यक्ति विपरीत लिंग के लोगों के प्रति आकर्षित होते हैं, समलैंगिक व्यक्ति समान लिंग के लोगों के प्रति आकर्षित होते हैं, और उभयलिंगी व्यक्ति दोनों के प्रति आकर्षित होते हैं। अन्य यौन रुझानों में पैनसेक्सुअल, अलैंगिक और डेमिसेक्सुअल शामिल हैं। यह समझना आवश्यक है कि यौन रुझान कोई विकल्प नहीं है और लोग अपना यौन रुझान नहीं बदल सकते। सकारात्मक यौन स्वास्थ्य को बढ़ावा देने के लिए सभी यौन रुझानों वाले व्यक्तियों का समर्थन करना और एक समावेशी वातावरण बनाना महत्वपूर्ण है।',
+
+            'parentalGuidanceHeading':'माता पिता का मार्गदर्शन',
+           'parentalGuidancePara':'यौन स्वास्थ्य और शिक्षा के बारे में बच्चों और किशोरों के साथ प्रभावी संचार महत्वपूर्ण है, और यह जल्दी शुरू होना चाहिए और उम्र के अनुरूप होना चाहिए। माता-पिता को एक सुरक्षित और निर्णय-मुक्त स्थान बनाना चाहिए जहां उनके बच्चे इन विषयों पर चर्चा करने में सहज महसूस करें, इस बात पर जोर दें कि प्रश्नों और चिंताओं का स्वागत है।',
+           'parentalGuidanceModalText':'स्वस्थ रिश्ते, सम्मान, सहमति और संचार को बढ़ावा देना भी महत्वपूर्ण है। युवावस्था और उसके घटित होने से पहले होने वाले शारीरिक और भावनात्मक परिवर्तनों पर चर्चा करने से बच्चों को तैयार होने में मदद मिलती है। जैसे-जैसे बच्चे परिपक्व होते हैं, सुरक्षित यौन संबंध और सुरक्षा पर चर्चा की जानी चाहिए, गर्भनिरोधक के महत्व और यौन संचारित संक्रमणों (एसटीआई) से सुरक्षा पर जोर दिया जाना चाहिए। माता-पिता को भी साथियों के दबाव को संबोधित करना चाहिए और अपने बच्चों को इसे पहचानना और इसका विरोध करना सिखाना चाहिए, जिससे उन्हें सूचित निर्णय लेने में सशक्त बनाया जा सके। गोपनीयता का सम्मान करना, विशेष रूप से किशोरावस्था के दौरान, महत्वपूर्ण है, साथ ही रिश्तों और कामुकता से संबंधित स्वस्थ दृष्टिकोण और व्यवहार के मामले में एक सकारात्मक रोल मॉडल बनना भी महत्वपूर्ण है।',
+
+           'noFapHeading':'नोफैप',
+           'noFapPara':'NoFap का विचार है कि पोर्नोग्राफी और हस्तमैथुन दोनों को व्यसनों के रूप में माना जाए, जिसका इलाज आत्म-नियंत्रण, आत्म-सुधार और इंटरनेट पोर्न के साथ ठंडे-टर्की ब्रेक के माध्यम से किया जाना चाहिए। NoFap वास्तव में एक नई अवधारणा नहीं है - संयम और हस्तमैथुन विरोधी आंदोलन सदियों से मौजूद हैं। नीचे क्लिक करके इसके बारे में और जानें।',
+           'noFapModalText':'इंटरनेट पोर्नोग्राफ़ी आपके मस्तिष्क के लिए ख़राब है और इससे बचना आपके मानसिक स्वास्थ्य के लिए अच्छा है। हस्तमैथुन आम तौर पर आपके स्वास्थ्य के लिए बुरा है (विशेषकर अधिक मात्रा में) और इसलिए हस्तमैथुन से दूर रहना इसके लिए अच्छा है।NoFap का दावा है कि पोर्न और हस्तमैथुन की लत समस्याएँ पैदा करती है। इससे दिमागी धुंध, कम आत्मसम्मान और कई अन्य समस्याएं हो सकती हैं। जो व्यक्ति हस्तमैथुन करना बंद करना चाहते हैं, उन्हें NoFap समुदाय से समर्थन मिल सकता है।',
+
+
+           'sexualMentalHealthHeading':'यौन और मानसिक स्वास्थ्य',
+           'sexualMentalHealthPara':'यौन स्वास्थ्य और मानसिक स्वास्थ्य आपस में घनिष्ठ रूप से जुड़े हुए हैं, मानसिक स्वास्थ्य का यौन अनुभवों पर महत्वपूर्ण प्रभाव पड़ता है। एक संतुष्टिदायक यौन जीवन आत्म-सम्मान और भावनात्मक अंतरंगता को बढ़ा सकता है, जिससे मानसिक स्वास्थ्य पर सकारात्मक प्रभाव पड़ता है। खुला संचार और समर्थन इस आवश्यक संतुलन को बनाए रखने की कुंजी है।',
+           'sexualMentalHealthModalText':'यौन स्वास्थ्य शिक्षा की खोज से व्यक्तियों को अपने यौन कल्याण के बारे में सूचित निर्णय लेने में मदद मिल सकती है। विचार करने के लिए यहां कुछ महत्वपूर्ण पहलू दिए गए हैं:',
+
+
+           'culturalReligiousHeading':'सांस्कृतिक और धार्मिक परिप्रेक्ष्य',
+           'culturalReligiousPara':'सांस्कृतिक और धार्मिक दृष्टिकोण यौन स्वास्थ्य और रिश्तों के संबंध में व्यक्तियों की मान्यताओं और मूल्यों को आकार देने में महत्वपूर्ण भूमिका निभाते हैं। ये विविध दृष्टिकोण गर्भनिरोधक, यौन अभिविन्यास और विवाह पूर्व यौन संबंध जैसे विषयों के प्रति दृष्टिकोण को प्रभावित कर सकते हैं। इन दृष्टिकोणों को समझना और उनका सम्मान करना व्यापक यौन स्वास्थ्य शिक्षा और समर्थन प्रदान करने के लिए आवश्यक है जो व्यक्तियों की सांस्कृतिक और धार्मिक पृष्ठभूमि पर विचार करता है।',
+          'culturalReligiousModalText':'सांस्कृतिक और धार्मिक दृष्टिकोण यौन स्वास्थ्य के प्रति दृष्टिकोण को दृढ़ता से आकार देते हैं। ये दृष्टिकोण सांस्कृतिक रूप से संवेदनशील यौन स्वास्थ्य शिक्षा और समर्थन के महत्व पर जोर देते हुए यौन व्यवहार, परिवार नियोजन और लिंग भूमिकाओं से संबंधित निर्णयों को प्रभावित करते हैं।'
             
     }
         // Add more languages transaltion here
@@ -246,9 +296,27 @@ document.addEventListener("DOMContentLoaded", function () {
         sexualOrientationText.textContent = languages[language]['sexualOrientationText'];
         sexualOrientationModalText.textContent = languages[language]['sexualOrientationModalText'];
 
+        parentalGuidanceHeading.textContent = languages[language]['parentalGuidanceHeading']
+        parentGuidancePara.textContent = languages[language]['parentalGuidancePara'];
+        parentalGuidanceModalText.textContent = languages[language]['parentalGuidanceModalText'];
+
+        noFapHeading.textContent = languages[language]['noFapHeading'];
+        noFapPara.textContent = languages[language]['noFapPara'];
+        noFapModalText.textContent = languages[language]['noFapModalText'];
+
+
+        sexualMentalHealthHeading.textContent = languages[language]['sexualMentalHealthHeading'];
+        sexualMentalHealthPara.textContent = languages[language]['sexualMentalHealthPara'];
+        sexualMentalHealthModalText.textContent = languages[language]['sexualMentalHealthModalText'];
+
+        culturalReligiousHeading.textContent = languages[language]['culturalReligiousHeading'];
+        culturalReligiousPara.textContent = languages[language]['culturalReligiousPara'];
+        culturalReligiousModalText.textContent = languages[language]['culturalReligiousModalText'];
+
     }
 
     updateContent(currentLanguage);
+
 
 
     // Language switcher event listener 
