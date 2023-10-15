@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'segoe ui', 'PT Serif', serif;
+    font-family: "Baloo 2", cursive;
 }
 html{
     font-size: 60%;
@@ -19,9 +19,15 @@ body{
 }
 
 .topnav {
-    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    /* background-color: rgb(255, 236, 225); */
+    background-color: transparent;
     overflow: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
   }
   
@@ -29,18 +35,18 @@ body{
   .topnav a {
     float: left;
     display: block;
-    color: grey;
+    color: rgb(38, 38, 38);
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 28px;
     text-decoration: none;
-    font-size: 17px;
-    background-color: whitesmoke;
-    font-family: aquire;
+    font-size: 20px;
+    /* background-color: whitesmoke; */
+    /* font-family: aquire; */
   }
   
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    /* background-color: #ddd; */
+    color: rgb(158, 158, 158);
   }
   .topnav a.active {
     background-color: #04AA6D;
@@ -111,30 +117,33 @@ input[type="radio"]:checked{
     border-color: orange;
 }
 .btn{
-    padding: 2rem 5rem;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
     height: 9rem;
 }
 button{
-    padding: 0 5rem;
-    height: 5rem;
+    width: 13rem;
+    height: 4.6rem;
     border: none;
     border-radius: 5rem;
-    background-color: #eeb283;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     background-color: rgb(238, 178, 131);
-    border: .5px solid rgb(158, 107, 78);
     font-size: 2rem;
-    font-weight: bold;
+    box-shadow:  0 0 4px rgba(0, 0, 0, 0.225);
+    font-weight: 580;
     cursor: pointer;
+    color: white;
     transition: ease-in-out 0.4s;
 }
 button:hover{
     /* height: 4rem; */
-    margin-top: .5rem;
-    height: 4rem;
+    /* margin-top: .5rem;
+    height: 4rem; */
     text-align: center;
-    background-color: rgb(158, 107, 78);
+    background-color: rgb(251, 223, 204);
 }
 .result{
     width: 100%;
@@ -157,7 +166,7 @@ button:hover{
     font-size: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -166,7 +175,7 @@ button:hover{
   }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -178,7 +187,7 @@ button:hover{
       display: block;
       text-align: left;
     }
-  }
+  } */ 
 
 
 /* 
