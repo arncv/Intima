@@ -114,6 +114,7 @@ body {
     width: 100%;
     gap: 11rem;
 }
+
 @media (min-width: 250px) and (max-width: 372px) {
     .msger{
         width: 100%;
