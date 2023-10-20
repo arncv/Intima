@@ -7,8 +7,8 @@ chatForm.addEventListener("submit", async (event) => {
   const message = messageInput.value;
 
   const messageEl = document.createElement("div");
-  messageEl.className = "message right-msg";
-  messageEl.textContent = `You: ${message}`;
+  messageEl.className = "message msg-user";
+  messageEl.textContent = message;
   chatLog.appendChild(messageEl);
 
   const response = await fetch("https://codex-a2ni.onrender.com/", {
