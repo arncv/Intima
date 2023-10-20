@@ -44,10 +44,10 @@ chatForm.addEventListener("submit", async (event) => {
       chatLog.scrollTop = chatLog.scrollHeight;
       messageInput.value = "";
     } catch (error) {
-      console.error("Error parsing the bot response:", error);
+      console.error("Error fetching bot  response:", error);
     }
   } else {
-    console.error("Request to the API failed with status:", response.status);
+    console.error("Request  failed:", response.status);
   }
 });
 
