@@ -171,6 +171,10 @@ submitBtn.addEventListener('click',()=>{
 });
 
 next.addEventListener('click', ()=>{
+    const selectedOptionIndex=getSelectedOption();
+    if(selectedOptionIndex === quizData[currentQuiz].correct){
+        score++;
+    }
     currentQuiz++;
 
     if(currentQuiz<quizData.length){
