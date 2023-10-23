@@ -7,6 +7,17 @@ function myFunction() {
     }
   }
 
+function  getScore() {
+    quizHistory.forEach((ans, index) => {
+        console.log(ans, index)
+        if (ans === quizData[index].correct){
+            score++;
+        }
+    })
+}
+
+let quizHistory = [];
+
 const quizData=[
     {
         question: "What is the primary goal of sex education?",
@@ -115,6 +126,7 @@ const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] = document.querySelectorAll("#question, #option_1, #option_2, #option_3, #option_4");
 const submitBtn = document.querySelector("#submit");
 const next = document.querySelector("#next");
+const back = document.querySelector("#back");
 let currentQuiz = 0;
 let score = 0;
 const loadQuiz = () => {
@@ -133,72 +145,67 @@ const getSelectedOption=()=>{
     return answerElement.findIndex((currElm,index)=>currElm.checked);
     
 }
-const deselected=()=>{
-    return answerElm.forEach((currElm)=>(currElm.checked=false));
+
+const selectQuestionAnswer=(currentQuiz)=>{
+    return answerElm.forEach((currElm, index)=>{
+        index === quizHistory[currentQuiz] ? currElm.checked=true : currElm.checked=false
+    });
 }
 
 submitBtn.addEventListener('click',()=>{
     const selectedOptionIndex=getSelectedOption();
-    if(selectedOptionIndex === quizData[currentQuiz].correct){
-        score++;
+    Number.isFinite(quizHistory[currentQuiz]) ? quizHistory[currentQuiz] = selectedOptionIndex : quizHistory.push(selectedOptionIndex)
+    getScore();
+
+    quiz.innerHTML=`
+        <div class="result">
+        <h3>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h3>
+        <p class="para"></p>
+        <button class="reload-button" onclick="location.reload()">Play Again ↻</button>
+        </div>
+    `;
+    const para=document.querySelector(".para");
+    if(score>=7){
+        para.innerText="😀 Congratulation! you have good Knowledge of sexual health 🎉";
     }
-    currentQuiz++;
-    if(currentQuiz<quizData.length){
-        deselected();
-        loadQuiz();
+    else if(score>=4 && score<7){
+        para.innerText="Good 🙂, But you need to know more about Sex Education. You can check out Resources Section";
     }
     else{
-        quiz.innerHTML=`
-            <div class="result">
-            <h3>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h3>
-            <p class="para"></p>
-            <button class="reload-button" onclick="location.reload()">Play Again ↻</button>
-            </div>
-        `;
-        const para=document.querySelector(".para");
-        if(score>=7){
-            para.innerText="😀 Congratulation! you have good Knowledge of sexual health 🎉";
-        }
-        else if(score>=4 && score<7){
-            para.innerText="Good 🙂, But you need to know more about Sex Education. You can check out Resources Section";
-        }
-        else{
-            para.innerText="sorry 😔! you are not aware of Sex education. Read more from our Resources Section.";
-        }
-
+        para.innerText="sorry 😔! you are not aware of Sex education. Read more from our Resources Section.";
     }
-
 });
 
 next.addEventListener('click', ()=>{
     const selectedOptionIndex=getSelectedOption();
-    if(selectedOptionIndex === quizData[currentQuiz].correct){
-        score++;
-    }
+    Number.isFinite(quizHistory[currentQuiz]) ? quizHistory[currentQuiz] = selectedOptionIndex : quizHistory.push(selectedOptionIndex)
     currentQuiz++;
 
-    if(currentQuiz<quizData.length){
-        deselected();
-        loadQuiz();
+    selectQuestionAnswer(currentQuiz);
+    loadQuiz();
+    
+    if (currentQuiz === quizData.length - 1) {
+        submitBtn.style.display = 'block';
+        next.style.display = 'none';
+    } else {
+        submitBtn.style.display = 'none';
+        next.style.display = 'block';
+        back.style.display = 'block';
     }
-    else{
-        quiz.innerHTML=`
-            <div class="result">
-            <h3>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h3>
-            <p class="para"></p>
-            <button class="reload-button" onclick="location.reload()">Play Again ↻</button>
-            </div>
-        `;
-        const para=document.querySelector(".para");
-        if(score>=7){
-            para.innerText="😀 Congratulation! you have good Knowledge of sexual health 🎉";
-        }
-        else if(score>=4 && score<7){
-            para.innerText="Good 🙂, But you need to know more about Sex Education. You can check out Resources Section";
-        }
-        else{
-            para.innerText="sorry 😔! you are not aware of Sex education. Read more from our Resources Section.";
-        }
+})
 
+back.addEventListener('click', ()=>{
+    
+    const selectedOptionIndex=getSelectedOption();
+    Number.isFinite(quizHistory[currentQuiz]) ? quizHistory[currentQuiz] = selectedOptionIndex : quizHistory.push(selectedOptionIndex)
+    currentQuiz--;
+    submitBtn.style.display = 'none';
+    next.style.display = 'block';
+    
+    if (currentQuiz ===  0) {
+        back.style.display = 'none';
     }
+
+    selectQuestionAnswer(currentQuiz);
+    loadQuiz();
 })
