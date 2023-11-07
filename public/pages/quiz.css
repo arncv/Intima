@@ -61,6 +61,8 @@ input[type="radio"]:checked{
     padding: 2rem 5rem;
     text-align: center;
 }
+
+
 button{
     padding: 0 5rem;
     height: 5rem;

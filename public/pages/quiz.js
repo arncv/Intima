@@ -7,7 +7,8 @@ const quizData=[
             "To discourage any discussion about sex",
             "To focus solely on the risks of sexual activity"
         ],
-        correct: 1
+        correct: 1,
+        checked: -1
     },
     {
         question: "At what age is it recommended to start sex education for children?",
@@ -17,7 +18,8 @@ const quizData=[
             "15-17 years old",
             " 2-3 years old"
         ],
-        correct: 1
+        correct: 1,
+        checked: -1
     },
     {
         question: "Which sexually transmitted infection (STI) is caused by a virus?",
@@ -27,7 +29,8 @@ const quizData=[
             "Syphilis",
             "Human Papillomavirus (HPV)"
         ],
-        correct: 1
+        correct: 1,
+        checked: -1
     },
     {
         question: "What is the menstrual cycle?",
@@ -37,7 +40,8 @@ const quizData=[
             "The process of sperm production in males",
             "The growth of body hair in puberty"
         ],
-        correct: 0
+        correct: 0,
+        checked: -1
     },
     {
         question: "What is the importance of using contraception?",
@@ -47,7 +51,9 @@ const quizData=[
             "To reduce the risk of unintended pregnancies and STIs",
             "Contraception is not necessary in committed relationships"
         ],
-        correct: 2
+        correct: 2,
+        checked: -1
+
     },
     {
         question: "What is the most effective method of preventing unintended pregnancies and sexually transmitted infections (STIs)?",
@@ -57,7 +63,9 @@ const quizData=[
             "Birth control pills",
             "Praying for protection"
         ],
-        correct: 1
+        correct: 1,
+        checked: -1
+
     },
     {
         question: "What is the primary role of parents and guardians in sex education?",
@@ -67,7 +75,9 @@ const quizData=[
             "To supplement school-based sex education with open and age-appropriate discussions",
             "To leave sex education entirely to schools"
         ],
-        correct: 2
+        correct: 2,
+        checked: -1
+
     },
     {
         question: "Which of the following statements about sexually transmitted infections (STIs) is true?",
@@ -77,7 +87,9 @@ const quizData=[
             "Some STIs can be transmitted through skin-to-skin contact.",
             "STIs have no impact on reproductive health."
         ],
-        correct: 2
+        correct: 2,
+        checked:-1
+
     },
     {
         question: "What is the purpose of teaching about the concept of \"sexual health\" in sex education?",
@@ -87,7 +99,8 @@ const quizData=[
             "To promote a holistic understanding of physical, emotional, and social aspects of sexuality",
             "To limit discussions to reproductive health only"
         ],
-        correct: 2
+        correct: 2,
+        checked: -1
     },
     {
         question: "Which of the following is an example of a long-acting reversible contraceptive method?",
@@ -97,7 +110,9 @@ const quizData=[
             "Hormonal patches",
             "Intrauterine device (IUD)"
         ],
-        correct: 3
+        correct: 3,
+        checked: -1
+
     },
 ];
 
@@ -105,18 +120,67 @@ const quiz=document.querySelector("#quiz");
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] = document.querySelectorAll("#question, #option_1, #option_2, #option_3, #option_4");
 const submitBtn = document.querySelector("#submit");
+const nextBtn = document.querySelector("#next");
+const prevBtn = document.querySelector("#previous");
 let currentQuiz = 0;
 let score = 0;
-const loadQuiz = () => {
+const loadNextQuiz = () => {
     const {question, options} = quizData[currentQuiz];
     questionElm.innerText = `${currentQuiz+1}: ${question}`;
 
     options.forEach(
         (curOption, index) => (window[`option_${index + 1}`].innerText = curOption)
     );
+
+    var radioElement;
+
+    if(quizData[currentQuiz].checked===0) {
+        radioElement = document.getElementById("a");
+        radioElement.checked = true;
+    }
+    else if(quizData[currentQuiz].checked===1) {
+        radioElement = document.getElementById("b");
+        radioElement.checked = true;
+    }
+    else if(quizData[currentQuiz].checked===2) {
+        radioElement = document.getElementById("c");
+        radioElement.checked = true;
+    }
+    else if(quizData[currentQuiz].checked===3) {
+        radioElement = document.getElementById("d");
+        radioElement.checked = true;
+    }
 };
 
-loadQuiz();
+const loadPrevQuiz = () => {
+    const {question, options} = quizData[currentQuiz];
+    questionElm.innerText = `${currentQuiz+1}: ${question}`;
+
+    options.forEach(
+        (curOption, index) => (window[`option_${index + 1}`].innerText = curOption)
+    );
+
+    var radioElement;
+
+    if(quizData[currentQuiz].checked===0) {
+        radioElement = document.getElementById("a");
+        radioElement.checked = true;
+    }
+    else if(quizData[currentQuiz].checked===1) {
+        radioElement = document.getElementById("b");
+        radioElement.checked = true;
+    }
+    else if(quizData[currentQuiz].checked===2) {
+        radioElement = document.getElementById("c");
+        radioElement.checked = true;
+    }
+    else if(quizData[currentQuiz].checked===3) {
+        radioElement = document.getElementById("d");
+        radioElement.checked = true;
+    }
+};
+
+loadNextQuiz();
 
 const getSelectedOption=()=>{
     let answerElement=Array.from(answerElm);
@@ -132,11 +196,7 @@ submitBtn.addEventListener('click',()=>{
         score++;
     }
     currentQuiz++;
-    if(currentQuiz<quizData.length){
-        deselected();
-        loadQuiz();
-    }
-    else{
+    if(currentQuiz===quizData.length){
         quiz.innerHTML=`
             <div class="result">
             <h3>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h3>
@@ -156,5 +216,37 @@ submitBtn.addEventListener('click',()=>{
         }
 
     }
+    }
+    );
 
+nextBtn.addEventListener('click',()=>{
+    const selectedOptionIndex=getSelectedOption();
+    quizData[currentQuiz].checked=selectedOptionIndex;
+    if(selectedOptionIndex === quizData[currentQuiz].correct){
+        score++;
+    }
+    currentQuiz++;
+    if(currentQuiz<quizData.length){
+        deselected();
+        loadNextQuiz();
+    }
+    else{
+        currentQuiz=currentQuiz-1;
+    }
+});
+
+prevBtn.addEventListener('click',()=>{
+    const selectedOptionIndex=getSelectedOption();
+    quizData[currentQuiz].checked=selectedOptionIndex;
+    if(selectedOptionIndex === quizData[currentQuiz].correct){
+        score++;
+    }
+    currentQuiz--;
+    if(currentQuiz>=0){
+        deselected();
+        loadPrevQuiz();
+    }
+    else{
+        currentQuiz++;
+    }
 });
