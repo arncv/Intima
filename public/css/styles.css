@@ -11904,10 +11904,11 @@ footer a:hover, footer a:active, footer a:focus {
 .dark-mode-btn {
   display: flex;
   justify-self: center;
-  align-self: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  align-self: left;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+  object-fit: contain;
   cursor: pointer;
 }
 
