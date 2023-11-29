@@ -72,7 +72,7 @@ To further enhance user experience, Intima integrates ChatGPT, an AI-powered cha
 
 ## Code Of Conduct
 
-Click Here [CODE_OF_CONDUCT](https://github.com/arncv/Intima/blob/main/CODE_OF_CONDUCT.md)
+[CODE_OF_CONDUCT](https://github.com/arncv/Intima/blob/main/CODE_OF_CONDUCT.md)
 
 
 
