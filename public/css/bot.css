@@ -1,136 +1,145 @@
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
 .msger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .msger-header {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .msger-header-title p {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .msger-chat {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
 }
 
 .msg {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .msg-img {
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.msg-user {
+  background-color: white;
+  margin-block: 8px;
+  padding: 4px;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.msg-bubble, .message-reply {
-    background-color: #eeb283;
-    border-radius: 10px;
-    padding: 10px;
-    color: #fff;
-    max-width: 70%;
+.msg-bubble,
+.message-reply {
+  background-color: #eeb283;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  max-width: 70%;
 }
 
 .msg-info {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .msg-info-name {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .msger-inputarea {
-    display: flex;
-    gap: 27px;
-    width: 100%;
-    align-items: center;
-    padding: 10px;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    border-radius: 0 0 10px 10px;
+  display: flex;
+  gap: 27px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 10px 10px;
 }
 
-
 .msger-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 .msger-send-btn {
-    background-color: #eeb283;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  background-color: #eeb283;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .msger-send-btn:hover {
-    background-color:#f59349;
+  background-color: #f59349;
 }
-.btn{
-    background-color: #eeb283;
-    border-radius: 1rem;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 2rem;
+.btn {
+  background-color: #eeb283;
+  border-radius: 1rem;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 2rem;
 }
-#back-btn{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    gap: 11rem;
+#back-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 11rem;
 }
+
 @media (min-width: 250px) and (max-width: 372px) {
-    .msger{
-        width: 100%;
-        height: 100%;
-    }
-    .msger-inputarea{
-        gap: px;
-    }
-    label{
-        display: none;
-    }
-    #back-btn{
-        gap: 8rem;
-    }
+  .msger {
+    width: 100%;
+    height: 100%;
+  }
+  .msger-inputarea {
+    gap: px;
+  }
+  label {
+    display: none;
+  }
+  #back-btn {
+    gap: 8rem;
+  }
 }
 @media (min-width: 372px) and (max-width: 600px) {
-    #back-btn{
-        gap: 15rem;
-    }
+  #back-btn {
+    gap: 15rem;
+  }
 }
